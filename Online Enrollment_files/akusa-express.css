@@ -1,0 +1,289 @@
+﻿/* Alaska USA Stylesheet*/
+ 
+/* Shared styles across all media sizes */
+/* Style reset */
+body,div,dl,dt,dd,ul,ol,li,pre,form,/*input,*/textarea,p,blockquote,th,td{margin:0;padding:0;} 
+table{ border-collapse:collapse; border-spacing:0;border-width:0;} 
+img,a{ border:none;/*outline:none*/} 
+address,caption,cite,code,dfn,em,strong,th,var{ font-style:normal; font-weight:normal} 
+em {font-style:italic;}
+caption,th{ text-align:left} 
+q:before,q:after{ content:''} 
+abbr,acronym{border:0} 
+strong {font-weight:bold;}
+fieldset{padding:10px;}
+
+/* Master Font/Size Definitions - set the base font and size for all browsers */
+/*body {font:76% / 1.4 arial, helvetica, sans-serif;}
+body:not(.express) {font:100% / 1.4 pt_sans_narrowregular, arial, helvetica, sans-serif;}
+body {font:100% / 1.4 pt_sans_narrowregular, arial, helvetica, sans-serif;}*/
+body {font:80% / 1.4 arial, helvetica, sans-serif;}
+
+/* Basic HTML Styles */
+p {margin:1em 0;}
+p:first-child {margin-top:0;}
+h1 {font-size:1.9em;line-height:1;text-shadow: 1px 1px 2px #333333;}
+h2 {clear:both; margin:1em 0 .5em;font-size:1.4em;font-weight:bold;color:#004990;}
+h3 {clear:both; margin:1em 0 .5em;font-size:1.1em;font-weight:bold;color:#004990;}
+h4,h5,h6{margin:1em 0 .5em; font-size:1em; font-weight:bold;}
+
+dt {font-weight:bold;}
+dd {margin-left:40px;}
+hr {margin:1em 1em;padding:0;border:1px solid black;}
+ol,ul{margin:.5em 0 1em;padding:0 0 0 20px;}
+li {margin-left:.5em;margin-bottom:5px;}
+/*form {display:inline;}*/
+
+/* from HTML5 Boilerplate */
+nav ul { margin: 0; padding: 0;}
+nav ul li { list-style: none; margin: 0; padding: 0;}
+
+table th,table td { vertical-align: middle; }
+table th { font-weight: bold; text-align: center;}
+
+
+
+/* Reusable utility / organizational */
+.contentBox{border:1px solid #999999;padding:3px;background-color:#f0f0f0;color:black;}
+
+/* Basic link styles */
+a {text-decoration:none;color:#044990;}
+/*a:link{}*/
+a:visited{color:#660066}
+a:hover {text-decoration:underline;}
+ 
+ 
+
+/* top and bottom borders on the header cause it to auto-expand to contain the floated elements */
+.webpayment #header {width:100%;background:#096CA7 url("/css/nav/header_bg.png") repeat-x scroll center  top;border-top:1px solid #003C77; border-bottom:1px solid #096CA7;}
+.webpayment #topBar {width:768px;max-width:100%; margin:20px auto;}
+.webpayment #logo {padding:0 0 0 6px; }
+.webpayment #logo img { height: 45px;}
+.webpayment #topBar p { padding-right:10px; line-height:45px; text-align:right; margin-bottom:0; }
+.webpayment #topBar a {color:#ffffff;}
+.webpayment .pgMain { width: 768px; max-width:100%; box-sizing:border-box;}
+.webpayment #footer { width: 768px; max-width:100%; margin: 0 auto; }
+.webpayment .leftCol .learnMore h2 { margin:0; line-height:32px; padding-left: 8px;}
+.webpayment .leftCol .learnMore h2:before { content:none;}
+.webpayment .leftCol .learnMore a { text-decoration:underline; }
+.webpayment .termsBox { margin-bottom:10px; overflow-y:scroll; box-sizing: border-box;  width:100%; height:250px; border:2px outset silver; text-align:left; font-family:Courier; padding:3px; }
+
+/* top and bottom borders on the header cause it to auto-expand to contain the floated elements */
+.express #header {width:100%;background:#096CA7 url("/css/nav/header_bg.png") repeat-x scroll center  top;border-top:1px solid #003C77; border-bottom:1px solid #096CA7;}
+.express #topBar {width:768px;max-width:100%; margin:20px auto;}
+.express #logo {padding:0 0 0 6px; }
+.express #logo img { height: 45px;}
+.express #topBar p { padding-right:10px; line-height:45px; text-align:right; margin-bottom:0; }
+.express #topBar a {color:#ffffff;}
+.express .pgMain { width: 768px; max-width:100%; box-sizing:border-box;}
+.express #footer { width: 768px; max-width:100%; margin: 0 auto; }
+.express .leftCol .learnMore h2 { margin:0; line-height:32px; padding-left: 8px;}
+.express .leftCol .learnMore h2:before { content:none;}
+.express .leftCol .learnMore a { text-decoration:underline; }
+.express .termsBox { margin-bottom:10px; overflow-y:scroll; box-sizing: border-box;  width:100%; height:250px; border:2px outset silver; text-align:left; font-family:Courier; padding:3px; }
+
+
+/* Self clearing floats with class "clear" */
+.clear:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+
+
+.pgTitle h1, .pgMain { 
+	display:block;width:100%;margin:0;float:none;
+	box-sizing:border-box;padding-left:5px;padding-right:5px;
+}
+
+
+/* pgTitle support */
+.pgTitle {position:relative;background-color:#3f77c0;clear:both;margin-bottom:10px}
+.pgTitle h1 {width:100%;box-sizing:border-box;margin-top:0;padding:.7em 6px 0 6px; font-size:2em; color:white; background-color:transparent;}
+
+
+.pgMain { clear:left;}
+.center {text-align:center;}
+
+
+/* Full-width #siteFooter */
+#siteFooter {border-radius:0 0 0 0;padding-bottom: 20px;color:#545454;background-color:#c8c8c8;}
+#siteFooter a, #siteFooter a:link, #siteFooter a:visited{color:#545454;padding:1px;text-decoration:none;}
+/* #footer content*/
+#footer p {margin:0 0 .4em;line-height:1.2;}
+#footer .links {padding:5px;border-bottom:1px dotted #666666;line-height:2;}
+#footer .links a {padding:5px 6px;white-space:nowrap;}
+#footer .links a:hover {text-decoration:underline;}
+#footer img {padding-right:15px;}
+#footer .disclaimer p {margin:.4em;}
+
+
+
+.pgFeature {border-radius:3px; padding:5px; background: #C5D0E8; }
+.pgFeature h2 {margin:10px 10px -5px 0;padding-top:0;padding-left:0;}
+
+
+/*.learnMore - auto-collapse adaptation */
+.learnMore {margin:10px 5px; padding:0; border-radius:3px; overflow:hidden;background-color:#3F77C0;color:#ffffff;}
+.learnMore:first-child {margin-top:0;}
+.learnMore h2 {line-height:32px;margin:0; border-radius: 3px 3px 0 0; padding:0 8px; font-size:1.2em;color:#ffffff;background:#004990; font-weight:normal;}
+.learnMore h2 a:link,.learnMore h2 a:visited,.learnMore h2 a:hover  {color:#cccccc;}
+.learnMore a:link, .learnMore a:visited, .learnMore a.hover {color:#ffffff;}
+.learnMore p {margin:.5em 0;padding:0;margin-left:8px;}
+.learnMore ul, .learnMore li{margin:.5em 0;}
+.learnMore hr {margin:0;border-width:0 0 1px 0;border-color:gray;padding:0;color:gray;}
+
+
+/* Floating items - Wrap in a .clearfix element if all content is to be floated */
+.left, .fl {float:left;}
+.right, .fr {float:right;}
+.decorLeft {float:left;margin-right:15px;}
+.decorRight {float:right;margin-left:15px;}
+/* micro-clearfix */
+.clearfix:before,.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+
+@media screen and (max-width:479px) {
+	.disclaimer .disclaimerLogos { float:right; width:50%; text-align:center;}
+	.disclaimer .disclaimerLogos .decorRight { float:none; margin: 5px 0 0 0; }
+}
+
+@media screen and (max-width:767px){
+	/* Alaska USA Mobile Stylesheet - styles uniquely for screens smaller than 768 px */
+	
+	/* Gross page geometry */
+	body { position:relative;margin:0 auto; }
+	#pgBody {width:100%;min-width:320px;min-height:548px;background-color:transparent;}
+	
+	.pgTitle {z-index:1;}
+	.pgTitle:after {content:""; position:absolute; display:block; width:100%; height:10px;background:#ffffff;z-index:-1;}
+	.pgMain {position:relative;z-index:1;background-color:#ffffff;padding-left:6px; padding-right:6px;}
+	
+	#siteFooter {padding-bottom:8px;}
+	/* Self clearing #siteFooter */
+	#siteFooter:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+	
+	
+	
+	
+	
+	/* *********************************
+	 Alaska USA Global Navigation Styles
+	********************************* */
+	#logo {
+		float:none; display:block; box-sizing:border-box; 
+		width:145px; height:44px; margin-left:auto; margin-right:auto; padding:4px 15px; 
+	}
+	#logo img { height:100%;}	
+	
+	/* Footer */
+	#footer .links a {padding:0 6px;}
+	
+		
+	
+	/* new design */
+	.leftCol h1 {padding:10px 0 10px 0;}
+	.leftCol h2 {margin:.5em 0 auto 0; line-height:1.5;}
+			
+	.disclaimer {font-weight:normal;font-size:10px;font-style:italic;}
+		
+	/* don't let images in pageflow break out of the container width */
+	.pgMain img {max-width:100%;height:auto;}	
+	
+	
+	/* *************************
+	End Global Navigation Styles
+	************************* */		
+}
+/* End of mobile adaptations */
+
+
+
+@media screen and (min-width:768px){
+/* Alaska USA Desktop Stylesheet - These build on base styles for 768px+ browsers */
+
+/* *********************************
+ Alaska USA Global Navigation Styles
+********************************* */
+
+#logo { float:left; }
+
+/* pgTitle > h1 */
+.pgTitle h1 { width:960px; margin-left:auto;margin-right:auto; font-size:3em;padding-left:0}
+
+/* clear auto-indent of linearized columns/elements */
+.pgMain { width:960px; margin:2em auto; float:none;}
+
+
+/* Footer */
+#siteFooter {position:relative;clear:both;}
+#siteFooter:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+/*	* html #siteFooter {height:1%;} IE 5-6 Win - Holly hack */
+/*	*:first-child+html #siteFooter {min-height:1%;} IE7 only */
+
+#footer {padding-bottom:20px;}
+#footer .links {line-height:3;}
+
+
+	/* new design */
+	.leftCol {padding:0 0 0 24px;background:url(nav/pgMainEdge.png) repeat-y 8px 0;}
+	.leftCol > h2 {position:relative; margin:.5em 0 auto -22px; padding-left:22px;line-height:1.5em; }
+	.leftCol > h2:before {
+		content:""; position:absolute; height:9px; width:9px; left:2px; top:50%; margin-top:-5px;background-color:#004990;}
+	.leftCol > h3 {position:relative; margin:.5em 0 auto -5px; padding-left:22px;}
+	.leftCol > h3:before {
+		content:""; position:absolute; height:8px; width:8px; left:6px; top:7px;background-color:#004990;}
+	
+	.pgFeature {margin:0 0 1em -24px; padding:10px 20px; }
+	.pgFeature h2 {margin:10px 10px -5px 0;padding-top:0;padding-left:0;}
+	.pgFeature h2:before {height:0;width:0;}
+	
+	/* pdf icons on pdf links */
+	a[href$=".pdf"]::before { background-image: url(images/icon-pdf.png); }
+
+/* *************************
+End Global Navigation Styles
+************************* */
+	.disclaimer {font-weight:normal;font-style:italic; margin:10px;}
+	
+	
+}
+/* End of desktop (768+) rules */
+
+/* Small-desktop / table overrides (768px)*/
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	/* Base geometry */
+	.pgTitle .promo, .pgTitle .decor, .pgTitle h1 {width:768px;}
+
+
+/* external sites 
+body.express {position:static;}
+.express > form {background-color:#ffffff;}
+.express #header {position:static;height:auto;width:100%}
+.express #header > div:first-child { height:0; }
+.express #logo {padding:0 10px;}
+.express #navBar p {padding-right:10px; line-height:35px;text-align:right;}
+.express #navBar a {color:#ffffff;}
+.express #navBarMenu  {margin:0;}
+.express .col_12 {margin-left:0;margin-right:0;}
+.express .frmButtons {background-color:#ffffff;}*/
+}
+/* End of tablet (768px small-desktop) adaptations */
+
+
+
+/* Print-only items */
+@media print {
+	.noPrint {display:none;}
+	body {position:static !important; top:0;background-color:white;}
+	#header {position:static !important; top:0;}
+	.dataTable {page-break-inside:avoid;}
+	#pgBody {box-shadow:none;}
+}
+
+
+/* SchumerBox - used in CLAMP and BOP/EBOLA */
+.schumerbox { font-size:10pt;font-family:Arial; }
+table.schumerbox, .schumerbox td { border: 1px solid black;}
+table.schumerbox { border-bottom:0; border-left:0;}
+.schumerbox td { border-top:0; border-right:0;}
+.schumerbox td.nobottomborder { border-bottom:0;}
+.schumerbox p { margin:0px; padding: 0px;}
+.schumerbox .schumerheader { background-color:black; color:white;font-weight:bold;}
+.schumerbox .schumerbigtext { font-size:16pt; }

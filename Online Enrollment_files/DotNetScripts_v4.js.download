@@ -1,0 +1,701 @@
+
+//Adapted from FormsLib_v3.js by jw on 7/16/2008
+//12/4/08 jw added custom message functionality to ShowPleaseWait
+//11/13/09 JR added functions to fix referrer bug in IE
+//05/12/10 JR modified referrer bug code to work correctly in Chrome
+//5/17/2010 JR fix for WebKit browsers (Safari, Chrome)
+//12/9/10 JW added JS to manipulate CSS rules
+//1/23/12 JW added window.sys check to the webkit browser detection piece
+
+
+
+function ShowPleaseWait(OptionalWaitMessage)
+{
+	//utility function to put on an onclick for known slow loading pages
+    document.getElementById('PgWidth').style.display='none';
+    document.getElementById('PleaseWait').style.display='block';
+	if(OptionalWaitMessage)
+	{
+		document.getElementById('PleaseWaitMessage').innerHTML=OptionalWaitMessage;
+	}
+	else
+	{
+		document.getElementById('PleaseWaitMessage').innerHTML='Please wait';
+	}
+}
+
+function HidePleaseWait() {
+    //utility function to put on an onclick for known slow loading pages
+    document.getElementById('PgWidth').style.display = 'block';
+    document.getElementById('PleaseWait').style.display = 'none';
+}
+
+function ShowLoading() {
+    if ($("#LoadingContainer").length == 0) {
+        $("body").append("<div id='LoadingContainer' style='display:none;'><div id='LoadingBackground'></div><div id='Loading'><div class='inner'><span class='message'>Loading...</span></div></div></div>");
+    }
+    $("#LoadingContainer").fadeIn();
+}
+function HideLoading() {
+    $("#LoadingContainer").remove();
+}
+
+
+function SetFocus()
+{
+	//when called this selects the first textbox on the page.  if no textboxes, it will choose the first textarea
+    var e = $('input:text:enabled:visible,textarea:enabled:visible');
+    //alert(e.length)
+    if (e.length > 0) 
+    {
+        for (var i = 0; i < e.length; i++) 
+        {
+            //loop through all elements and find the first one with no hidden parents
+            var p = $(e[0]).parents(":hidden");
+            if (p.length == 0) { e[0].focus(); }
+            return;
+        }
+    }
+}
+
+function initializeRequest(sender, args) {
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    ShowLoading();
+    //var eventId = args.get_postBackElement.id; //3/28/12 JW changed this to the line below because the get_postBackElement was not returning the element for some reason
+    var eventId;
+    if (args)
+    {
+        if (args._postBackElement)
+        {
+            if (typeof (args._postBackElement)==="function")
+            {
+                eventId = args._postBackElement().id;
+            }
+            else{
+                eventId = args._postBackElement.id;
+            }
+
+        }
+    }
+    var eventArgs = document.forms[0].__EVENTARGUMENT.value;
+
+    if (prm.get_isInAsyncPostBack()) {
+        //alert('already in postback....' + args._postBackElement.id);
+        setTimeout("Wait('" + eventId + "','" + eventArgs + "')", 500); //queue up this event while the current ajax event finishes.  Event is reconstructed/executed by the wait function
+        args.set_cancel(true);  //cancel this event
+    }
+
+}
+
+function Wait(eventId, eventArgs) {
+    var sender = document.getElementById(eventId);
+    //this logic inspects the event source to see how we need to re-create the canceled event
+    //buttons get clicked, linkbuttons have their javascript executed, and other form controls fire a __doPostBack
+    if (sender.tagName.toLowerCase() == "input") 
+    {
+        if(sender.type.toLowerCase() == "submit")
+        {
+            //alert('1.1');
+            $(sender).click();
+        }
+        else if(sender.name)
+        {
+            //alert('1.2');
+            __doPostBack(sender.name, eventArgs);
+        }
+        else {
+            //alert('1.3');
+            __doPostBack(eventId, eventArgs); //no name attribute
+        }
+
+    }
+    else if (sender.tagName.toLowerCase() == "a" && (sender.getAttribute("href").indexOf("_DoPostBackWithOptions") >= 0 || sender.getAttribute("href").indexOf("__doPostBack") >= 0)) {
+        //alert('2...' + sender.id);
+        eval(sender.getAttribute("href").replace("/javascript:/", ""));
+    }
+    else {
+        //alert('3...' + eventId);
+        __doPostBack(eventId, eventArgs);
+    }
+}
+
+
+
+
+
+function endRequest(sender, args) 
+{
+    HideLoading();
+}
+
+
+
+
+function AjaxFix()
+{
+    // checks the PageRequestManager if there is already a postback being processed
+    // and aborts the postback (question: which postback does it abort?)
+    // See details here: http://microsoftmiles.blogspot.com/2006/11/maintaining-gridview-scroll-position-in.html
+    // and http://geekswithblogs.net/rashid/archive/2007/08/08/Asp.net-Ajax-UpdatePanel-Simultaneous-Update---A-Remedy.aspx
+	if(Sys)
+	{
+	    //fix the chrome and other webkit browsers so endrequest is called
+
+	    // Fixes an error we uncovered where endRequest was not being called in Chrome
+	    // Turns out the error is related the browser detection in the AJAXToolKit
+	    // Safari and Google Chrome are WebKit browsers
+	    // http://stackoverflow.com/questions/981198/safari-and-asp-net-ajax-pagerequestmanager-add-endrequest-function-not-always-fir
+	    // http://forums.asp.net/t/1252014.aspx
+	    Sys.Browser.WebKit = {}; //Safari 3 is considered WebKit
+	    if (navigator.userAgent.indexOf('WebKit/') > -1)
+	    {
+	        Sys.Browser.agent = Sys.Browser.WebKit;
+	        Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+	        Sys.Browser.name = 'WebKit';
+	    }
+
+        //for all browsers, register the initializeRequest and endRequest callbacks
+    	if(Sys.WebForms)
+	    {
+    	    //IF partial rendering is enabled
+        	var prm = Sys.WebForms.PageRequestManager.getInstance(); 
+	        prm.add_initializeRequest(initializeRequest);
+    	    prm.add_endRequest(endRequest);
+		}
+    }
+  
+}
+
+
+/*******
+Use this function to fix Referrer in IE
+Used primary by GridViewHelper, but could be used anywhere
+*******/
+
+//use browser sniffing to determine if IE
+var isIE = window.ActiveXObject ? true : false; // ActiveX is only used in Internet Explorer
+//define for all browsers
+function goToUrl(url) {
+    if (isIE) {
+        var referLink = document.createElement('a');
+        referLink.href = url;
+        document.body.appendChild(referLink);
+        referLink.click();
+    }
+    else {
+        location.href = url;
+    }
+}
+
+/*******
+End Referrer Fix in IE
+*******/ 
+
+var PrefsFormsLib = new LibraryPrefs();
+
+function LibraryPrefs(){
+  this.DebugFlg=false; // provided only for debug purpose 
+  this.Version="4.0"
+}
+
+
+
+function IsDate(dStr,displayErrors){
+//'<FunctionNotes>
+//'  <Name>IsDate</Name>
+//'  <Gets>dStr a string value in m/dd/yy or yyyy format, 
+//         displayError optional, default = true, control how errors are handled, when set to true, the user sees and error from this function, if false, the function shows no error alerts.</Gets>
+//'  <Returns>True/False</Returns>
+//'  <Author>kelleyd</Author>
+//'  <DateModified>3/1/2002</DateModified>
+//'  <Notes> verification of string value to be a valid date</Notes>
+//'  <History>dk 8/8/03 corrected bug that appears in validating dates where users specified a month with more than 31 days.</History>
+//'</FunctionNotes>
+  if (displayErrors == null) displayErrors = true;
+	var ErrStr = "", monthNameArray = new Array("","January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+//tests to make sure the entered value is a valid date.  Returns True or false
+	 dArray = new Array(3);
+	 var result = 0,m,d,y;
+ // pattern matching with regular expressions
+ // this bit forces a user's date entry to split on dashes rather than
+ // slashes so that either can be used in the form element value.
+	 // finds a forward slash anywhere in the string
+	 var pattern = /\//g;
+	 // replacement string is a dash
+	 var replacement = "-"
+	 // finds and replaces all instances of pattern with replacement.  does nothing if no match is found
+	 var dStr = dStr.replace(pattern,replacement);
+	 //if (newDStr) { dStr = newDStr; }
+	 dArray = dStr.split("-");
+	 for (var i = 0; i < dArray.length; i++){
+	   if (!IsInteger(dArray[i])) return false;
+     if (dArray.length!=3 ) return false;
+	 }
+	 //so far all the values are numeric
+	 //now test to see it this is a valid date
+	m = dArray[0]; // parse date into variables
+    d = dArray[1];
+    y = parseInt(dArray[2]);
+    if(y<100) {y = 2000 + y;}
+  if (m<1 || m>12) ErrStr = ErrStr + "Month "+ m +" is out of range!\n";
+   if (d<0 || d>31) ErrStr = ErrStr + "Day "+ d +" is out of range!\n";
+  if ((m==4 || m==6 || m==9 || m==11) && d==31) {
+  	ErrStr = ErrStr + "The month of " + monthNameArray[m] + " doesn't have 31 days!\n"
+  }
+  if (m == 2) { // check for february 29th
+  	var isleap = (y % 4 == 0 && (y % 100 != 0 || y % 400 == 0));
+  	  if (d>29 || (d==29 && !isleap)) {
+    	ErrStr = ErrStr + "February '" + y + " doesn't have " + d + " days!\n";
+  	  }
+  }
+			
+  if (ErrStr == "")  return true;
+  if (ErrStr !="" && displayErrors == true)  alert(ErrStr); 
+  return false;
+}	// end function		
+
+function GetDateObject(dateStr){
+  dArray = new Array(3);
+  var returnDate, m, d, y, errFlg = false;
+  var pattern = /\//g;
+  var replacement = "-";
+  var dStr = dateStr.replace(pattern,replacement);// finds and replaces all instances of pattern with replacement.  does nothing if no match is found
+  dArray = dStr.split("-");
+  for (var i = 0; i < dArray.length; i++){
+    if (!IsNumeric(dArray[i])) errFlg=true;
+  }
+  if (dArray.length == 3 && errFlg !=true) { // this checks for array items before trying to parse them
+    y = parseInt(dArray[2]);
+    if( y < 100)  y = y + 2000;
+    m = parseInt(dArray[0]) - 1
+    d = parseInt(dArray[1])
+    returnDate = new Date (y,m,d);
+   }// end if
+  return returnDate;
+}
+
+function FixThisDate(frmElement){
+//'<FunctionNotes>
+//'  <Name>FixThisDate</Name>
+//'  <Gets>a object reference to a form elment</Gets>
+//'  <Returns>sets the form element to a valid date formated as mm-dd-yyyy</Returns>
+//'  <Author>kelleyd</Author>
+//'  <DateModified>3/27/2002</DateModified>
+//'  <Notes>use this function to be more tollerant of data entry error the user may make with date fields.</Notes>
+//'</FunctionNotes>
+  var dArray //= new Array(2);
+  var dStr = frmElement.value; var pattern = /\//g;
+  dStr =dStr.replace(pattern,"-");
+  dArray = dStr.split("-");
+  var currentDate = new Date()
+  if (dArray.length == 2) dArray[2] = currentDate.getYear()
+  if (dArray.length == 3 && dArray[2] =="") dArray[2]=currentDate.getYear()
+  if (dArray.length == 3) {	// this checks for array items before trying to parse them
+     if(dArray[2]=="" || dArray[2]==null) dArray[2] = currentDate.getYear()
+     if(dArray[2].length == 2 ) dArray[2] = "20" + dArray[2];
+     frmElement.value = dArray[0] + "-" + dArray[1] + "-" + dArray[2]
+  }// end if
+}// end function
+
+
+function IsNumeric(n){
+//<FunctionNotes>
+//  <Name>IsNumeric</Name>
+//  <Gets>N/A</Gets>
+//  <Returns>True or false</Returns>
+//  <Author>kelleyd</Author>
+//  <DateModified>3/15/2002</DateModified>
+//  <Notes>Verifies whether or not a given value is numeric</Notes>
+//</FunctionNotes>
+//tests for 0-9 all numeric values.  returns true or false
+	  var str = "0123456789.-";
+	  for (var i = 0; i < n.length; i++){
+	    if (str.indexOf(n.substring(i,i + 1)) == -1) return false;
+	  }
+	  return true;
+}
+
+
+
+
+function GetFieldValue(f){
+//Gets: a obj reference to a form control,
+//Returns: the value of the selected option of the form control
+//Notes: this function calls the other function which determines the value of the control
+	return GetFieldInfo(f, "value")
+}
+function GetFieldSelectedName(f){
+//Gets: a obj reference to a form control,
+//Returns: the name of the selected option of the form control
+//Notes: this function calls the other function which determines the name of the control
+	return GetFieldInfo(f, "name")
+}
+function GetFieldInfo(f, returnType){
+//Gets: a obj reference to a form control, and returnType=[ "name" | "value" ]
+//Returns: the current value or name of the selected option of the form control.
+//Notes: When returnType=name, returns the name of the form control except for Select //  elements, which return a comma-delimited string of Display Text for selected values. // When returnType=value, returns the current field value for text-oriented controls, //  Checkboxes, Radiobuttons, and Select elements return a comma-delimited list of the 
+//  'value' properties for only the currently selected items (Radios return only 1 item). // For text-related controls (text/textarea/password/hidden), this function works the same 
+//  as calling referencedObject.value or referencedObject.name
+  returnType=returnType.toLowerCase() // make input parameter case insensitive
+  var returnVal=""
+
+  if(f){ // make sure the reference exists and is a select element
+	//For Radio and Checkbox objects with multiple members
+    if(f.type == null){ 
+      if(returnType == "name") {returnVal = f[0].name;}//return name of the radio/CB control
+      if(returnType == "value") {
+        for(j=0;j<f.length;j++) {
+          if(f[j].checked == true) {//return values only if checked
+			if(returnVal != "") {returnVal = returnVal + ",";}
+			returnVal = returnVal + f[j].value; //return value of the element
+		  }
+		}//end for
+      }
+    }
+	//For Radio and Checkbox objects with single members 
+  	else if(f.type == "checkbox" || f.type=="radio") { 
+      if(returnType == "name") {returnVal = f.name; }//return name of the radio/CB control
+      if(returnType == "value" && f.checked == true) {returnVal = f.value; }//return value only if checked
+    } 
+	// single and multiple select elements
+	else if (f.type== "select-multiple" || f.type=="select-one") { 
+      for(j=0;j<f.length;j++){
+        if(f[j].selected == true) { // only return selected option elements
+          if(returnVal != "") {returnVal = returnVal + ",";}
+		  if(returnType == "value") {returnVal = returnVal + f[j].value;}//return value of the element
+          if(returnType == "name") {returnVal = returnVal + f[j].text;}//return display text of the element
+	    }
+	  }// end for
+    }
+	//For other object types
+	else{ 
+      if(returnType == "value") returnVal = f.value //return value of the element
+      if(returnType == "name") returnVal = f.name //return name of the element
+    }// end form element selection if/elseif/else statement
+  }
+  return returnVal
+}// end function
+
+
+function SetFieldValue(f, selectedValue){
+//Gets: a obj reference to a select type form control, value of the option that will be selected 
+//Returns: Nothing. Set the control with its value equal to the selectedValue
+//Note: this work primarily with Selected Options and Radio control types. For text and textarea control types, this function works the same as calling referencedObject.value = setVale
+  var returnVal=""
+  if(f){ // make sure the reference exists and is a select element
+  	  if(f.type == null || f.type == "select-one"){ //For Radio and Drop Down object types
+		  for(j=0;j<f.length;j++){
+		    if(f[j].value==selectedValue){
+				if(f.type == "select-one"){f.selectedIndex=j;}//For Drop Down object type
+				else{f[j].checked = true}//For Radio object type
+			}
+		  }// end for
+	  }
+	  //For other object types
+	  else{f.value = selectedValue}// end if
+  }
+}// end function
+
+function UpdateSelectOptions(frmControl,nvOptionsArray,selectedValue){
+/* frmControl is the reference to a Select control,
+   nvOptionsArray contains a name-value list of options
+   selectedValue contains desired Value (not name) that is to be Selected upon completion
+   if there is no matching value, the first item will be selected by default */
+ if(frmControl && frmControl.options){ // make sure the reference exists and is a select element
+           count=0;
+           frmControl.options.length=0;
+           for(i=0;i<nvOptionsArray.length;i+=2){
+           		isSelected = (nvOptionsArray[i+1] == selectedValue)
+                temp=new Option(nvOptionsArray[i],nvOptionsArray[i+1],isSelected,isSelected);
+                frmControl [count]=temp
+                count++;
+            }
+ }
+}// End Function
+
+function StringCompare(a,b){
+//Gets: two strings to be compared 
+//Returns: true or false
+  if (a.toLowerCase() == b.toLowerCase()) {return true; }else{return false;}
+}
+
+function IsInThisArray(thisValue,someArray){
+//Gets: a value string or int and a js array
+//Returns: T/F
+  var j
+  for(j=0;j<someArray.length;j++){
+    if(someArray[j]==thisValue) {return true}
+  }
+  return false;
+}
+
+function GetNameFromNVArray(thisValue,nvArray){
+//Gets: a value and an nvArray.
+//Returns: the name corresponding to the value passed in thisValue
+//         comparable to the asp function of the same name.
+  var j
+  for (j=1;j < nvArray.length;j=j+2){
+    if(nvArray[j]==thisValue){return nvArray[j-1];}
+  }
+  return false;
+}
+
+function DateCompare(fromDate,toDate,compareType){
+//Gets: 2 string date values of form mm/dd/yy or mm-dd-yy 
+//      and a comparison operator values "Equal | = |  GreaterThan | > | LessThan | < "
+//      null values of compareType are assumed to be =
+//Returns:T/F
+//Note: correctly handles 2 digit years and assumes values are > 2000
+ var dTo,dFrom
+ if (fromDate != "" && toDate != "") {
+   if (IsDate(toDate,false) && IsDate(fromDate,false)) { 
+     // confirm years are 4 digit before converting to date type vars.
+     dTo = new Date(ConvertDateStringToFourDigitYear(toDate));	
+     dFrom = new Date(ConvertDateStringToFourDigitYear(fromDate));} 
+ }else{
+   return false;
+ }
+ 
+ //alert(dTo);alert(dFrom);
+ // at this point you know you have two dates, now do your comparisons
+ // Equal
+ if (compareType.toLowerCase()=="equal" || compareType=="=" || compareType==null){
+   if (dFrom==dTo){return true;}else{return false;}
+ }
+ // GreaterThan  | >
+ if (compareType.toLowerCase()=="greaterthan" || compareType==">"){
+   if (dFrom>dTo){return true;}else{return false;}
+ }
+ // LessThan  | <
+ if (compareType.toLowerCase()=="lessthan" || compareType=="<"){
+   if (dFrom < dTo){return true;}else{return false;}
+ }
+  if (compareType==">="){ if (dFrom>=dTo){return true;}else{return false;} } 
+  if (compareType=="<="){ if (dFrom<=dTo){return true;}else{return false;} }
+}
+
+function ConvertDateStringToFourDigitYear(myDateStr){
+//Gets: a string of from m/d/yy or mm-dd-yy
+//Returns: same date in the form of  4 digit year.
+//Note: use this to compensate from what the user input and JS use of 1900 as a base year.
+//      you probably don't need to worry about this unless you are doing date comparison of validation
+  if(myDateStr!=""){
+    // find delimiter
+    var delimiter = ""
+    if (myDateStr.indexOf("/")>0){delimiter="/"}
+    if (myDateStr.indexOf("-")>0){delimiter="-"}
+    if (delimiter!=""){
+      var mmDDYY=myDateStr.split(delimiter)
+      if(mmDDYY.length==3){
+        if(mmDDYY[2].length==2){mmDDYY[2]="20" + mmDDYY[2];return mmDDYY.join(delimiter)}
+        if(mmDDYY[2].length==4){return myDateStr}
+      }// end array had 3 elements
+    }// end delimiter was found
+  }// end string not empty
+}  // end function
+
+function GetFileInfo(thisURL,infoType){
+//Gets: a url or path (string) and 
+//      infoType (string) Values: Extension or FileType | Name | Drive
+//Returns GetFileInfo("myImage.gif","FileType") returns "gif"  OR
+//        returns 'myImage.gif' from 'SomePath/myImage.gif' when infoType is FileName
+//        returns the drive letter when infoType is Drive
+  var p, fileType, fileName, drive
+  if (infoType=="Extension" || infoType=="FileType"){
+    p = thisURL.lastIndexOf(".")
+    if ((thisURL.length - p) == 4 || (thisURL.length - p)==5){
+      fileExtention = thisURL.substring(p+1)// gets gif from myFile.gif
+      return fileExtention;}
+  }// end get extension
+  
+  if (infoType=="Name" || infoType=="FileName"){
+    p = thisURL.lastIndexOf("/")
+    if (p==-1){
+      if(thisURL.lastIndexOf("\\") > 0){
+        p=thisURL.lastIndexOf("\\")}
+    }     //
+    fileName = thisURL.substring(p+1)// gets gif from myFile.gif
+    return fileName;
+  }// end getFile Name
+  
+  if (infoType=="Drive"){
+    p = thisURL.indexOf(":")
+    if (p==1){   return thisURL.charAt(0) + ":"  }
+  }// end getDrive
+
+}// end function
+
+
+
+
+function GetIDStrFromCheckboxes(controlName){
+//Gets: a form control name (string). ex 'MyCheckBox', looks for checkboxes that begin with controlName 
+//Returns: a comma delimited list of checkbox values
+//Note: you would typically use this if you were using a series of checkboxes to capture multiple enters in the
+//      form of a comma delimited list of ids. CB names are assumed to be numbered MyCheckBox0 .. MyCheckBox#
+//      WARRNING: this doesn't look all that closely at the controlsName and acts on anything that *begins with* controlname
+  var f = document.theForm ? document.theForm : document.forms[0]
+  var a = document.getElementsByTagName("input")
+  var j, returnStr=""
+  for(j=0;j<a.length;j++){// loop through all the input type controls on the form
+     if (a[j].type!=null && a[j].name!=null){// make sure everything has a type and name property
+       if (a[j].type=="checkbox" && a[j].name.indexOf(controlName)==0){// this is a ckbox who name begins with the controlName
+         if (a[j].checked==true){
+           if (returnStr != ""){returnStr += ","}
+           returnStr += a[j].value
+         }// end item was checked
+       }//end if, this was a  cb
+     }// end if, no name property
+  }//end for
+  return returnStr
+}// end function
+
+
+function SetCheckboxes(controlName,cbAction){
+//Gets controlName (string) the name of a series of checkboxes, and 
+//     cbAction (string) values Check | Uncheck
+//     check boxes are assumed to be unique and numbered controlName# ex. controlName0...controlName#
+//Returns T/F
+//Note: this is used to initialize a series of check boxes to all checked or not checked.
+//      this would be used with a check All or uncheck all link.
+//      the function finds all the checkbox elements that begin with controlName and set their state to cbAction
+//      WARNING: this doesn't look very closely at names, it will act on any CB that *begins with* the controlName passed
+
+  var f = document.theForm ? document.theForm : document.forms[0]
+  var a = document.getElementsByTagName("input")
+  var j, returnResult=true
+  for(j=0;j<a.length;j++){//loop through a collection of checkbox elements
+     if (a[j].type!=null && a[j].name!=null){
+       if (a[j].type=="checkbox" && a[j].name.indexOf(controlName)==0){
+         if (cbAction=="Check"){a[j].checked = true}else{a[j].checked=false}
+       }//end if, this was a  cb
+     }// end if, no type or name property
+  }//end for
+  return true  
+}
+
+// ADDED in 3.1
+function GetItemFromNVArray(thisValue,nvArray){
+//Gets: and integer or string, and an nvArray.
+//Returns: the name corresponding the the value.
+//Note:  returns MyValue from (...,MyValue,N,...) when N is passed
+// this is a JS variant of the asp function
+  var j,intCompareFlg = false
+  if (IsNumeric(thisValue)){intCompareFlg=true}
+  for (j=0; j < nvArray.length; j=j+2){
+    if(intCompareFlg){
+      if (IntegerCompare(thisValue,nvArray[j+1])){return nvArray[j];}
+    }else{// string comparison
+      if(thisValue==nvArray[j+1]){return nvArray[j];}
+    }
+  }
+  return "";
+}
+
+function IntegerCompare(x,y){
+//Gets two values.
+//Returns true if both values are numeric and equal
+  var returnVal = false
+  if (x !=null && y != null){
+    if (parseInt(x) ==  parseInt(y)){returnVal=true}
+  }
+  return returnVal
+}
+
+function IsInteger(n){
+//<FunctionNotes>
+//  <Name>IsInteger</Name>
+//  <Gets>N/A</Gets>
+//  <Returns>True or false</Returns>
+//  <Author>kelleyd</Author>
+//  <DateModified>12/6/2005</DateModified>
+//  <Notes>Verifies whether or not a given value is an integer characters 0-9</Notes>
+//</FunctionNotes>
+//tests for 0-9 all numeric values.  returns true or false
+	  var str = "0123456789";
+	  for (var i = 0; i < n.length; i++){
+	    if (str.indexOf(n.substring(i,i + 1)) == -1) return false;
+	  }
+	  return true;
+}
+
+function Has_Attribute(e,attrName){
+//Gets an object reference to a form or dom element and attrName, string, any property
+//NOTE: ie doesn't support the hasAttribute method, and browser are inconsistent in how they handle what is returned by
+//      e.getAttribute(attrName), some return null, others return and empty string.  This function abstracts this, handle
+//      differences in browsers and trues T/F based on whether the element has the property
+  if(e.hasAttribute){
+    // handles standards compliant browsers here
+    return e.hasAttribute(attrName)
+  }else{
+    //handle ie which doesn't support this method
+    if(e.getAttribute){
+      return e.getAttribute(attrName)!=null
+    }else{
+      return false;
+    }
+  }
+}
+
+
+function CancelEvent(e){
+//Gets an event, and prevent propgation of even up through the dom.
+//Example  onclick=Dosomething();CancelEvent(event);
+//Notes: works cross browser FF & IE
+  if(!e){var e = window.event;}
+	if(e.stopPropagation){e.stopPropagation();}else{e.cancelBubble = true;}
+}
+
+
+
+
+function getCSSRule(ruleName, deleteFlag) {               // Return requested style obejct
+    ruleName = ruleName.toLowerCase();                       // Convert test string to lower case.
+    if (document.styleSheets) {                            // If browser can play with stylesheets
+        for (var i = 0; i < document.styleSheets.length; i++) { // For each stylesheet
+            var styleSheet = document.styleSheets[i];          // Get the current Stylesheet
+            var ii = 0;                                        // Initialize subCounter.
+            var cssRule = false;                               // Initialize cssRule. 
+            do {                                             // For each rule in stylesheet
+                if (styleSheet.cssRules) {                    // Browser uses cssRules?
+                    cssRule = styleSheet.cssRules[ii];         // Yes --Mozilla Style
+                } else {                                      // Browser usses rules?
+                    cssRule = styleSheet.rules[ii];            // Yes IE style. 
+                }                                             // End IE check.
+                if (cssRule) {                               // If we found a rule...
+                    if (cssRule.selectorText.toLowerCase() == ruleName) { //  match ruleName?
+                        if (deleteFlag == 'delete') {             // Yes.  Are we deleteing?
+                            if (styleSheet.cssRules) {           // Yes, deleting...
+                                styleSheet.deleteRule(ii);        // Delete rule, Moz Style
+                            } else {                             // Still deleting.
+                                styleSheet.removeRule(ii);        // Delete rule IE style.
+                            }                                    // End IE check.
+                            return true;                         // return true, class deleted.
+                        } else {                                // found and not deleting.
+                            return cssRule;                      // return the style object.
+                        }                                       // End delete Check
+                    }                                          // End found rule name
+                }                                             // end found cssRule
+                ii++;                                         // Increment sub-counter
+            } while (cssRule)                                // end While loop
+        }                                                   // end For loop
+    }                                                      // end styleSheet ability check
+    return false;                                          // we found NOTHING!
+}                                                         // end getCSSRule 
+
+function killCSSRule(ruleName) {                          // Delete a CSS rule   
+    return getCSSRule(ruleName, 'delete');                  // just call getCSSRule w/delete flag.
+}                                                         // end killCSSRule
+
+function addCSSRule(ruleName) {                           // Create a new css rule
+    if (document.styleSheets) {                            // Can browser do styleSheets?
+        if (!getCSSRule(ruleName)) {                        // if rule doesn't exist...
+            if (document.styleSheets[0].addRule) {           // Browser is IE?
+                document.styleSheets[0].addRule(ruleName, null, 0);      // Yes, add IE style
+            } else {                                         // Browser is IE?
+                document.styleSheets[0].insertRule(ruleName + ' { }', 0); // Yes, add Moz style.
+            }                                                // End browser check
+        }                                                   // End already exist check.
+    }                                                      // End browser ability check.
+    return getCSSRule(ruleName);                           // return rule we just created.
+} 

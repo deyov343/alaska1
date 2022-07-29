@@ -1,0 +1,16 @@
+/*UtilityStyles_v3
+Modified 7/16/2008 by jw
+This file defines some shortcut classes as an alternative to inline css.  Names describe visual effect rather then the object it is applied to
+
+*/
+
+.red{color:Red;}
+.blue{color:Blue;}
+.green{color:Green;}
+.gray{color:Gray;}
+
+.leftFloat{float:left;}
+.rightFloat{float:right;}
+
+.underline{text-decoration:underline;}
+.bold{font-weight:bold}

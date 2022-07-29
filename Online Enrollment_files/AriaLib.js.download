@@ -1,0 +1,216 @@
+﻿
+function SetAriaLabels_FormRows(selector) {
+	if (selector == "" || selector === undefined) { selector = ".ariaTableForm_row"; }
+	//console.log(selector);
+	$(selector).each(function () {
+		console.log(this.id);
+		$(this).find("th,.frmFieldName").each(function () {
+			if ($(this).find("label").length > 0) {
+				//label aria has been set manually, skip this cell
+				console.log('return');
+				return;
+			}
+			var nextElem
+			if (this.nodeName.toLowerCase() == "th") {
+				nextElem = $(this).next("td");
+			}
+			else { //.frmFieldName
+				nextElem = $(this).next(".frmDataValue");
+			}
+			var firstID = "";
+			var ariaLabel = ""; var ariaHint = "";
+			var inputs = nextElem.find("input[type=text],input[type=tel],input[type=number],select");
+			//console.log("inputs:" + inputs.length);
+			var hints = nextElem.find(".hint");
+			inputs.each(function () {
+				//console.log($(this).prop("id") + "..." + $(this).attr("aria-label") + "...");
+				if ($(this).attr("aria-label") != "" && $(this).attr("aria-label") + "" != "undefined") { return; }	//skip this iteration
+				var count = 0
+				if (firstID == "") {
+					firstID = this.id;
+					ariaLabel = aria_getNextUniqueID("ariaLabel_" + firstID)
+				}
+				var currentLabel = $(this).attr("aria-labelledby")
+				if (currentLabel === undefined) { currentLabel = ""; }
+				//console.log(firstID + "..." + currentLabel);
+				if (currentLabel.indexOf(ariaLabel) < 0) {
+					//console.log("here:" + $.trim(currentLabel + " ariaLabel_" + firstID))
+					$(this).attr("aria-labelledby", $.trim(currentLabel + " " + ariaLabel));
+				}
+			});
+			if (inputs.length >= 1 && hints.length == 1 && firstID != "") {	 //-- add describedby for hint to the first element				
+				var currentDescribed = $("#" + ariaLabel).attr("aria-describedby");
+				if (currentDescribed === undefined) { currentDescribed = ""; }
+				if (hints.prop("id") == "") { hints.prop("id", aria_getNextUniqueID("ariaHint_" + firstID)); }
+				if (currentDescribed.indexOf(hints.prop("id") < 0)) {
+					$("#" + firstID).attr("aria-describedby", $.trim(currentDescribed + " " + hints.prop("id")));
+				}
+			}
+			if ($(this).find("label").length == 0 && firstID != "") {
+				//no label, add one - wrap the entire contents
+				var html = $(this).html();
+				html = "<label id=\"" + ariaLabel + "\">" + html + "</label>";
+				$(this).html(html);
+			}
+		})
+	})
+}
+
+function SetAriaLabels_FormColumns(selector) {
+	if (selector == "" || selector === undefined) { selector = ".ariaTableForm_col"; }
+	$(selector).each(function () {
+		//grab the first row
+		$(this).find("tr:first td.frmFieldNameHeader, tr:first th").each(function () {
+			if ($(this).find("label").length > 0) {
+				//label aria has been set manually, skip this cell
+				return;
+			}
+			var col = $(this).closest("tr").children().index($(this));
+			var firstID = "";
+			var ariaLabel = ""; var ariaHint = "";
+			//console.log($(this).closest("table").find("tr:not(:first)").length);
+			$(this).closest("table").find("tr:not(:first)").each(function () {
+				$(this).find("td:eq(" + col + ")").each(function () {
+					var inputs = $(this).find("input[type=text],input[type=tel],input[type=number],select");
+					//console.log("col:" + col + ", inputs:" + inputs.length);
+					var hints = $(this).find(".hint");
+					inputs.each(function () {
+						//console.log($(this).prop("id") + "..." + $(this).attr("aria-label") + "...");
+						if ($(this).attr("aria-label") != "" && $(this).attr("aria-label") + "" != "undefined") { return; }	//skip this iteration
+						var count = 0
+						if (firstID == "") {
+							firstID = this.id;
+							ariaLabel = aria_getNextUniqueID("ariaLabel_" + firstID)
+						}
+						var currentLabel = $(this).attr("aria-labelledby")
+						if (currentLabel === undefined) { currentLabel = ""; }
+						//console.log(firstID + "..." + currentLabel);
+						if (currentLabel.indexOf(ariaLabel) < 0) {
+							//console.log("here:" + $.trim(currentLabel + " ariaLabel_" + firstID))
+							$(this).attr("aria-labelledby", $.trim(currentLabel + " " + ariaLabel));
+						}
+					});
+					if (inputs.length >= 1 && hints.length == 1 && firstID != "") {	 //-- add describedby for hint to the first element				
+						var currentDescribed = $("#" + ariaLabel).attr("aria-describedby");
+						if (currentDescribed === undefined) { currentDescribed = ""; }
+						if (hints.prop("id") == "") { hints.prop("id", aria_getNextUniqueID("ariaHint_" + firstID)); }
+						if (currentDescribed.indexOf(hints.prop("id") < 0)) {
+							$("#" + firstID).attr("aria-describedby", $.trim(currentDescribed + " " + hints.prop("id")));
+						}
+					}
+				});
+			});
+			if ($(this).find("label").length == 0 && firstID != "") {
+				//no label, add one - wrap the entire contents
+				var html = $(this).html();
+				html = "<label id=\"" + ariaLabel + "\">" + html + "</label>";
+				$(this).html(html);
+			}
+			//$(this).attr("scope", "col");
+		});
+	});
+}
+
+function AriaFixWrappedElements(selector) {
+	//.NET likes to wrap input tags with spans and throw attributes on the span.  This moves the aria attributes to the input
+	var ariaAttr = [ "aria-labelledby", "aria-label", "aria-describedby" ];
+	var tags = ["span"];
+	if (selector == "" || selector === undefined) { 
+		selector = "";
+		for (var t in tags) {		//t is index, 0, 1, 2		
+			for(var a in ariaAttr) {
+				if(selector != "") {selector += ","; }
+				selector += tags[t] + "[" + ariaAttr[a] + "]:not([role=radiogroup])";
+			}
+		}
+		//selector = "span[aria-labelledby],span[aria-label],span[aria-describedby]";
+	}
+	//console.log(selector);
+	$(selector).each(function () {
+		var foundAttr = false;
+		var wrapperAria = [];
+		var successAria = [];
+		for (var a in ariaAttr) {
+			wrapperAria[a] = $(this).attr(ariaAttr[a]);
+			if (wrapperAria[a] === undefined) { wrapperAria[a] = ""; }
+			if (wrapperAria[a] != "") { foundAttr = true; }
+		}
+
+		if (foundAttr) {
+			var inputs = $(this).find("input[type=text],input[type=tel],input[type=number],input[type=checkbox],input[type=radio],select");
+			inputs.each(function () {
+				var thisAria = [];
+				for(var a in ariaAttr) {
+					if (wrapperAria[a] != "") {
+						thisAria[a] = $(this).attr(ariaAttr[a]);
+						if (thisAria[a] === undefined) { thisAria[a] = ""; }
+						//add the aria-xx to the input
+						$(this).attr(ariaAttr[a], $.trim(thisAria[a] + " " + wrapperAria[a]));
+						successAria[a] = true;
+					}
+				}
+			});
+			//remove the aria-xx from the wrapper
+			for (var a in ariaAttr) {
+				if (successAria[a] == true) {
+					$(this).removeAttr(ariaAttr[a]);
+				}
+			}
+		}
+	});
+}
+
+function SetAriaForValidators() {
+	if (typeof (Page_Validators) == "undefined") {
+		console.log("undefined page_validators");
+		return;
+	}
+	var i;
+	for (i = 0; i < Page_Validators.length; i++) {
+		var val = Page_Validators[i];
+		console.log(val.id);
+		if (typeof (val.controltovalidate) == "string") {
+			var ctrl = $("#" + val.controltovalidate);
+			var describedBy = ctrl.attr("aria-describedby");
+			if (describedBy === undefined) { describedBy = ""; }
+			if (describedBy.indexOf(val.id) < 0) {
+				describedBy = $.trim(describedBy + " " + val.id)
+			}
+			if (ctrl.prop("tagName") == "SPAN") {
+				//its probably a checkboxlist or a radiolist, find the inputs inside
+				ctrl.find("input[type=checkbox],input[type=radio]").attr("aria-describedby", describedBy);
+			}
+			else {
+				ctrl.attr("aria-describedby", describedBy);
+			}
+
+			if (val.id.toLowerCase().indexOf("require") >= 0 || val.id.toLowerCase().indexOf("rfv_") >= 0) {
+				if (ctrl.prop("tagName") == "SPAN") {
+					//its probably a checkboxlist or a radiolist, find the inputs inside
+					if (typeof (val.MaxChecked) == "string" || typeof (val.MinChecked) == "string") {
+						if (val.MaxChecked == 1 && val.MaxChecked == 1) {	//checkboxlistvalidator with 1 items
+							ctrl.find("input[type=checkbox]").attr("aria-required", true);
+						}
+					}
+				}
+				else {
+					ctrl.attr("aria-required", true);
+				}
+			}
+		}
+		else {
+			//a custom validator?
+			console.log("SetAriaForValidators: Unhandled Custom Validator - " + val.id)
+		}
+	}
+}
+
+function aria_getNextUniqueID(id) {
+	var count = 0;
+	var newid = id + "_" + count;
+	while ($("#" + newid).length > 0) {
+		count++;
+		newid = id + "_" + count;
+	}
+	return newid;
+}

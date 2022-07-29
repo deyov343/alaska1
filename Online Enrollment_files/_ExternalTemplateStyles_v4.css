@@ -1,0 +1,98 @@
+/*
+Modified 10/17/11 by jw
+This file contains styles to supplement the standard public website look for .net apps
+
+*/
+#pgBody{background-color:White;/*width:720px;*/margin-left:auto;margin-right:auto;}
+body.Development{background-image:url(TemplateImages/DevelopmentBackground.gif);}
+body.Test{background-image:url(TemplateImages/TestBackground.gif);}
+body.QA{background-image:url(TemplateImages/QABackground.gif);}
+body.OJT{background-image:url(TemplateImages/OJTBackground.gif);}
+body.Development #pgBody,body.Test #pgBody,body.QA #pgBody,body.OJT #pgBody{
+    border: 2px solid silver;
+    border: 2px solid rgba(127, 127, 127, .10); /*semi-transparent border for browsers that support it*/
+}
+
+
+@media only screen and (max-width: 767px) {
+	/*reset styles from akusafcu.css*/
+	body { margin: 0 0; width: 100%; }
+	.col_12 { width:100%; margin-left: 0; margin-right: 0; }
+	#header { margin:0; width: 100%; }
+	#footer { margin:0; width: 100%; }
+			
+
+	select { -webkit-appearance:none; font-size:1.1em; background:white; }
+	input[type=button],input[type=submit] { -webkit-appearance:none; font-size:1.1em; padding: 6px 12px;
+		color: black; background: white; border:2px outset #999999; border-radius:0;
+	}
+	input[type=text],input[type=password],input[type=tel] { -webkit-appearance:none; font-size:1.1em; }
+	textarea { -webkit-appearance:none; font-size:1.1em; overflow-y:scroll; }
+	input[type='checkbox'] {
+		-webkit-appearance:none; width:25px; height:25px;
+		background:white; border-radius:5px; border:2px solid #555; margin-bottom: -6px;
+	}
+	input[type='checkbox']:checked { background:url(../../PgArt/check.gif) no-repeat center; }
+	input[type='radio'] {
+		/*-webkit-appearance:none;*/
+	}
+
+	.horizontalRadioList { font-size: 1.1em; }
+	.horizontalRadioList label:not(:last-child){ margin-right:15px; }
+	.verticalRadioList tr:not(:last-child) > td { padding-bottom:15px; }
+	.verticalRadioList_flow input { height:2em;  }    /*not sure if I can do anything no margin/padding bottom for label .NET puts input,label,br,input...*/
+	.rowSpacing > td { padding-top:10px; }
+	.horizontalSpacing a:not(:last-child) { margin-right:15px; }
+	.verticalSpacing li:not(:last-child) { margin-bottom:10px; }
+	.verticalSpacing div:not(:last-child) { margin-bottom:10px; }
+	.editLink,.deleteLink,.addLink { font-size: 1.1em; }
+}
+
+#LoadingBackground{ 
+    background-color: #666666;
+    opacity:.5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top:0;
+	left:0; /*added so background takes up whole screen*/
+    cursor:wait;}
+
+#Loading{ 
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top:0;
+	left:0; /*added so background takes up whole screen*/
+    cursor:wait;
+    z-index:999;
+    }
+
+#Loading .inner{ 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border:3px solid gray;
+    background: #222222;
+    background: rgba(0,0,0,.7);
+    height: 80px;
+    margin: 200px auto 0 auto;
+    text-align: center;
+    width: 200px;
+    }
+
+#Loading .message{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 80px;
+    padding-left:20px;
+     background-image:url(../../PgArt/spinner.gif);
+     background-repeat:no-repeat;
+    background-position:left center;
+    }
+
+

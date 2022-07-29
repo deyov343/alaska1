@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="/alaska-common.js?cache"></script><script type="text/javascript" src="/alaska-common.js?async" async></script>
+
+<meta charset="UTF-8">
+<title>Page Unavailable</title>
+<meta name="robots" content="noindex,nofollow,noimageindex,nomediaindex">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+	<!-- OneTrust Cookies Consent Notice start -->
+	<!--script type="text/javascript" src="https://cdn.cookielaw.org/consent/d9012451-973f-4944-835c-e7020071d90c/OtAutoBlock.js"></script-->
+	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="d9012451-973f-4944-835c-e7020071d90c"></script>
+	<script type="text/javascript">
+	function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end --><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W942G3C');</script>
+<!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="/css/akusafonts.css?20220722102" title="master">
+<link rel="stylesheet" href="/css/akusa-base.css?20220722102" title="master">
+<link rel="stylesheet" href="/css/akusa-phone.css?20220722102" media="(max-width:767px)">
+<link rel="stylesheet" href="/css/akusa-desktop.css?20220722102" media="all and (min-width:768px)">
+<link rel="stylesheet" href="/css/akusa-print.css?20220722102" media="print">
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/css/akusa-desktop.css" title="master">
+<style>#pgBody {width:100%;}</style>
+<![endif]-->
+<noscript>
+<link rel="stylesheet" href="/css/no-js.css?20220722102" title="master">
+</noscript>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript aria-hidden="true"><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-W942G3C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="pgBody">
+
+
+	<div class="siteHeader" role="banner">
+	<section class="skipLinks">
+		<h2 class="visuallyhidden">Skip links</h2>
+		<p><a href="#main" class="visuallyhidden">Skip to main content</a></p>
+		<p><a href="/service/contact.asp" class="visuallyhidden">If you are using a screen reader and having difficulties with the site, call the Member Service Center 24/7 at 800-525-9094.</a></p>
+		<p><a href="#footer" class="visuallyhidden">Skip to footer</a></p>
+	</section>
+	<div class="global col_all">
+		<h2>Alaska USA Federal Credit Union</h2>
+		<div id="homeAccBtn" class="mobileBtn"><a href="/"><span class="AkusaIcon-lock2"><span class="visuallyhidden">Lock icon</span></span><br>LOG IN</a></div>
+		<a href="/?t=tn" id="logo"><img src="/images/nav/akusafcu_logo.png" alt="Alaska USA Federal Credit Union"></a>
+		<div id="navMenuBtn" class="mobileBtn"><a href="/sitemap.asp" id="openMenu"><span class="AkusaIcon-menu"><span class="visuallyhidden">Menu icon</span></span>Menu</a></div>
+		<div id="persistentLogin"></div>
+
+		<ul class="sections">
+			<li class="on"><a href="/">For
+you</a></li>
+			<li><a href="/business.asp">For your
+business</a></li>
+			<li><a href="/about/">About
+us</a></li>
+	</ul>
+
+
+		<ul class="tools">
+			<li id="ubMenu"><a href="/?ac=acLogin" class="sf-with-ul"><span class="AkusaIcon-lock2"><span class="visuallyhidden">Lock icon</span></span>Log In</a>
+				<div class="menu">
+					<a class="close" href="#"><span class="AkusaIcon-cancel-x"><span class="visuallyhidden">Close</span></span></a>
+					<h4>Access your account and pay bills</h4>
+
+			<form name="SignInGlobal" class="ubForm" id="SignInGlobal" method="post" action="https://login.alaskausa.org/efs/servlet/efs/login-password-wait.jsp" aria-label="Login to your account">
+				
+					<p class="login">
+				
+					<input type="hidden" name="Referrerfield">
+					<input type="text" name="UserName" autocomplete="username" aria-label="User Id" id="UserNameGlobal" class="usernameField" value="" placeholder="User ID">
+					
+					<input type="submit" name="loginBtn" class="linkBtn loginBtn" value="Log In"></p>
+					<p class="clearfix center" style="color:#044990;" id="SignInGlobal_links">
+						<a style="padding:5px 6px;" href="https://login.alaskausa.org/efs/ultrabranch/ForgotPAC">Forgot Login</a>
+						| <a style="padding:5px 6px;" href="https://www.alaskausa.org/enroll">Enroll</a>
+					</p>
+			</form>
+	
+					<p class="action center"><a class="linkBtn" href="/exit.asp?id=payment">Make a payment</a></p>
+
+					<p><a class="app" href="/service/ultrabranch/app.asp">Get the Alaska&nbsp;USA app</a></p>
+
+				</div>
+			</li>
+			<li id="locationsMenu">
+				<a href="/service/branches.asp"><span class="AkusaIcon-locations"><span class="visuallyhidden">Locations icon</span></span>Locations</a>
+				<div class="menu">
+					<ul>
+						<li><a href="/service/branches.asp">Branches</a></li>
+						<li><a href="/service/atms.asp">ATMs</a></li>
+
+						<li><a href="/service/branches.asp?sharedbranches=true">Shared Branching Locations</a></li>
+
+						<li><a href="https://www.alaskausamortgage.com/ContactUs.html">Mortgage Offices</a></li>
+						<li><a href="/insurance/contact.asp">Insurance Offices</a></li>
+					</ul>
+				</div>
+			</li>
+			<li id="ratesMenu">
+
+				<a href="/current/rates/"><span class="AkusaIcon-rates"><span class="visuallyhidden">Rates icon</span></span>Rates</a>
+
+				<div class="menu">
+
+					<ul>
+						<li><a href="/current/rates/consumerloanrates.asp">Vehicle Loans</a></li>
+						<li><a href="/current/rates/consumerloanrates.asp#Other_Secured">Other Loans</a></li>
+						<li><a href="/current/rates/consumerloanrates.asp#Credit_Cards_and_Unsecured_Loans">Credit Cards</a></li>
+						<li><a href="/current/rates/sharerates.asp">Checking / Savings</a></li>
+						<li><a href="/current/rates/sharerates.asp#Money_Market_Accounts">Money Market Account</a></li>
+						<li><a href="/current/rates/certificaterates.asp">Certificates</a></li>
+						<li><a href="/current/rates/homeloanrates.asp">Home Loans</a></li>
+						<li><a href="/current/rates/businessloanrates.asp">Business Loans</a></li>
+						<li><a href="/current/rates/">All Rates</a></li>
+					</ul>
+
+				</div>
+			</li>
+			<li id="contactMenu">
+				<a href="/service/contact.asp"><span class="AkusaIcon-phone"><span class="visuallyhidden">Phone icon</span></span>Contact</a>
+				<div class="menu">
+
+					<p><strong>907-563-4567</strong> or <br><strong>800-525-9094</strong></p>
+					<p>Open 24 hours a day, 7 days a week.</p>
+					<p><a  href="mailto:memberservice@alaskausa.org">memberservice<span class="AkusaIcon-at"><span class="visuallyhidden">at</span></span>alaskausa.org</a>
+						<br><a href="#" onclick="openChat();return false;">Live chat</a></p>
+					<p>Routing number <a style="display:inline" href="/service/help/achnumber.asp" title="Routing and account number calculator">325272021</a></p>
+					<p><a href="/service/contact.asp">More contact information</a></p>
+				</div>
+			</li>
+		</ul>
+	</div><!-- #topBar-->
+
+<nav id="navBar" class="col_all">
+<ul class="globalNav">
+	<li id="accounts">
+		<a href="/share/">Accounts</a>
+		<div class="menu">
+				<div class="col">
+					<h4>Accounts</h4>
+					<ul>
+						<li><a href="/share/checking.asp">Checking</a></li>
+						<li><a href="/share/savings.asp">Savings</a></li>
+						<li><a href="/loans/visaPlatinum.asp">Credit Card</a></li>
+						<li><a href="/share/moneymarket.asp">Money Market</a></li>
+						<li><a href="/share/certificates.asp">Certificates</a></li>
+						<li><a href="/share/IRAs.asp">IRA</a></li>
+						<li><a href="/share/hsa.asp">Health Savings Account</a></li>
+						<li><a href="/business/accounts.asp">Business Accounts</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>Related Services</h4>
+					<ul>
+						<li><a href="/share/debit.asp">Visa Debit Card / ATM Card</a></li>
+						<li><a href="/service/ultrabranch/">Online Account Access</a></li>
+                        <li><a href="/share/clickswitch.asp">ClickSWITCH<sup>&trade;</sup></a></li>
+						<li><a href="/share/directDeposit.asp">Direct Deposit</a></li>
+						<li><a href="/share/overdraftProtection.asp">Overdraft Protection</a></li>
+						<li><a href="/business/">Business Services</a></li>
+						<li><a href="/service/otherServices.asp">Other Services</a></li>
+					</ul>
+				</div>
+				<div class="col action">
+					<p><a href="/service/apply.asp?s=checking" class="linkBtn">Open an account</a></p>
+					<p><a href="/service/contact.asp" class="linkBtn">Contact us<br>800-525-9094</a></p>
+                    <p><a href="/current/rates/" class="linkBtn">Rates</a></p>
+				</div>
+		</div>
+	</li>
+	<li id="loans">
+		<a href="/loans/">Loans</a>
+		<div class="menu">
+				<div class="col">
+                <h4>Loans and Credit Cards</h4>
+					<ul>
+						<li><a href="/loans/vehicleLoans.asp">Vehicle Loans</a></li>
+						<li><a href="/loans/personalLoans.asp">Personal Loans</a></li>
+						<li><a href="/loans/visaPlatinum.asp">Credit Cards</a></li>
+						<li><a href="/loans/nada.asp">NADA</a></li>
+					</ul>
+				</div>
+				<div class="col action">
+					<p><a href="/exit.asp?id=consloanapp" class="linkBtn">Apply online</a></p>
+					<p><a href="/current/rates/consumerLoanRates.asp" class="linkBtn">Loan rates</a></p>
+					<p><a href="/service/contact.asp" class="linkBtn">Contact us<br>
+					800-525-9094</a></p>
+				</div>
+		</div>
+	</li>
+	<li id="insurance">
+		<a href="/insurance/">Insurance</a>
+		<div class="menu">
+				<div class="col">
+					<h4>Protect Your Vehicles</h4>
+					<ul>
+						<li><a href="/insurance/personal/auto.asp">Auto</a></li>
+						<li><a href="/insurance/personal/boat.asp">Boat</a></li>
+						<li><a href="/insurance/personal/rv.asp">Motorhome / RV</a></li>
+						<li><a href="/insurance/personal/toys.asp">Motorcycles / ATVs / Snowmachines</a></li>
+					</ul>
+					<h4>Protect Your Loan</h4>
+					<ul>
+						<li><a href="/insurance/members/gap.asp">Asset Protection (GAP)</a></li>
+						<li><a href="/insurance/members/paymentprotection.asp">Payment Protection</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>Protect Your Home</h4>
+					<ul>
+						<li><a href="/insurance/personal/property.asp#homeowners">Homeowners</a></li>
+						<li><a href="/insurance/personal/property.asp#condo">Condo</a></li>
+						<li><a href="/insurance/personal/property.asp#renters">Renters</a></li>
+						<li><a href="/insurance/personal/property.asp#landlord">Landlord</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>Protect You / Your Family</h4>
+					<ul>
+						<li><a href="/insurance/personal/liability.asp">Umbrella</a></li>
+						<li><a href="/insurance/members/add.asp">Accidental Death &amp; Dismemberment</a></li>
+						<li><a href="/insurance/members/termlife.asp">Term Life</a></li>
+						<li><a href="/insurance/members/wholelife.asp">Whole life coverage</a><li>
+					</ul>
+				</div>
+				<div class="col action">
+					<p><a href="/insurance/quote.asp" class="linkBtn">Get an insurance quote</a></p>
+					<p><a href="/insurance/contact.asp" class="linkBtn">Contact Alaska&nbsp;USA Insurance Brokers<br>
+					800-478-1251</a></p>
+					<p><a href="/insurance/insurLinkportal.asp" class="linkBtn">Insurance Portal<br></a></p>
+					<span style="text-shadow: none; font-size: .9em; color: #044990; font-weight: lighter; padding-left:20px;"><a href="/insurance/insurLink.asp"><strong>Register for an account »</strong></a></span>
+				</div>
+		</div>
+	</li>
+	<li id="homeloans">
+		<a href="/realestate/">Home Loans</a>
+		<div class="menu">
+				<div class="col action">
+                    <p><a href="https://reloans.alaskausa.org/" class="linkBtn">Real Estate Loans &nbsp;<img src="/images/jumplink-white.svg" align="bottom" alt="jump real estate loan"></a></p>
+					<p><a href="https://www.alaskausamortgage.com/FindanOriginator.html" class="linkBtn">Home Loans &nbsp;<img src="/images/jumplink-white.svg" align="bottom" alt="jump home loan"></a></p>
+					<p><a href="https://reloans.alaskausa.org/" class="linkBtn">HELOCs &nbsp;<img src="/images/jumplink-white.svg" align="bottom" alt="jump Helocs"></a></p>
+				</div>
+		</div>
+	</li>
+	<li id="investments">
+		<a href="/investment/">Plan &amp; Invest</a>
+		<div class="menu">
+				<div class="col">
+					<ul>
+						<li><a href="/investment/#retire">Retirement</a></li>
+						<li><a href="/investment/#savings">Education Funding</a></li>
+						<li><a href="/investment/#ins">Insurance</a></li>
+						<li><a href="/investment/#ESRP">Employer Sponsored Retirement Plans</a></li>
+						<li><a href="/investment/#invest">Investments</a></li>
+					</ul>
+				</div>
+				<div class="col action">
+                    <p><a href="/investment/email.asp" class="linkBtn">Contact a Financial Professional</a></p>
+                    <p><a href="/investment/team.asp" class="linkBtn">Meet your financial professionals</a></p>
+				</div>
+		</div>
+	</li>
+	<li id="search">
+		<a href="/service/search.asp"><span class="AkusaIcon-search"><span class="visuallyhidden">Search icon</span></span>Search</a>
+		<div class="menu">
+				<div class="col">
+					<h4><label for="searchField">Search Alaska&nbsp;USA</label></h4>
+					<form name="searchForm" action="/service/search.asp" method="get">
+					<p><input id="searchField" name="s" type="text" class="searchBox" placeholder="search">
+						<input type="submit" name="search" id="searchSubmit" class="linkBtn searchBtn" value="go">
+					</p>
+					</form>
+				</div>
+		</div>
+	</li>
+
+
+
+
+
+
+</ul>
+</nav>
+
+</div><!-- #siteHeader-->
+<div class="flyin hide"></div>
+
+<link rel="stylesheet" href="/current/chat/genesys_akusa.css?20220722102" id="genesys_akusa_styles">
+<script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadFile('/current/chat/genesys_config_prod.js?20220722102').done(function(){CXBus.loadPlugin('widgets-core')});"></script>
+
+<script type="text/javascript">
+	function openChat() {
+        CXBus.command('WebChat.open', { formJSON: genesysChatForm_json });
+    }
+</script>
+
+<main id="main" role="main">
+<div class="pgTitle">
+	<h1>Page Unavailable</h1>
+</div>
+<div class="pgMain">
+<div class="row">
+<div class="col_8">
+	<div class="leftCol">
+
+	<h3>The page you requested does not exist.</h3>
+	<p>If you attempted to load a page from a bookmark, it may be out of date.
+	Please delete and re-create any expired bookmarks you may have previously saved.</p>
+
+	</div>
+</div><!--.col_8-->
+<div class="col_4">
+	<div class="sideBar">
+		<div class="learnMore">
+			<h2>Resources</h2>
+            <ul class="links">
+			    <li><a href="/service/search.asp">Search Alaska&nbsp;USA</A></li>
+			    <li><a href="/service/faq.asp">Frequently Asked Questions</A></li>
+			    <li><A HREF="/sitemap.asp">Site Map</A></li>
+            </ul>
+		</div>
+	</div>
+</div><!--.col_4-->
+</div><!--.row-->
+
+</div><!--#pgMain-->
+</main>
+
+<div id="siteFooter" role="contentinfo">
+	<div id="footer" class="col_all">
+		<nav aria-label="footer links">
+		<ul class="links">
+			<li><a href="/?t=f">Home</a></li>
+            <li><a href="/about/?t=f">About</a></li>
+			<li><a href="/service/contact.asp?t=f">Contact</a></li>
+			<li><a href="/about/employment.asp?t=f">Careers</a></li>
+			<li><a href="/service/security/privacy.asp?t=f">Privacy</a></li>
+			<li><a href="/service/security/?t=f">Security</a></li>
+			<li><a href="/service/branches.asp?t=f">Locations</a></li>
+			<li><a href="/service/faq.asp?t=f">FAQs</a></li>
+			<li><a href="https://go.alaskausa.org/feedback">Feedback</a></li>
+			
+		</ul>
+		</nav>
+		
+		<div id="footer_contact">
+			<h2>Connect with us!</h2>
+			<ul class="social">
+				<li><a href="https://www.facebook.com/AlaskaUSAFCU" class="ext"><span class="AkusaIcon-Facebook">Facebook icon</span>Facebook</a></li>
+				<li><a href="https://www.youtube.com/AlaskaUSAFCU" class="ext"><span class="AkusaIcon-Youtube">Youtube icon</span>Youtube</a></li>
+				<li><a href="https://www.linkedin.com/company/alaska-usa-federal-credit-union" class="ext"><span class="AkusaIcon-LinkedIn">LinkedIn icon</span>LinkedIn</a></li>
+				<li><a href="https://twitter.com/alaskausafcu" class="ext"><span class="AkusaIcon-Twitter">Twitter icon</span>Twitter</a></li>
+				<li><a href="https://www.instagram.com/alaskausafcu/" class="ext"><span class="AkusaIcon-Instagram">Instagram</span>Instagram</a></li>
+
+			</ul>
+			<h3><span>Need to reach us? </span><span>Give us a call!</span></h3>
+			<p>Member Service Center is open 24/7</p>
+			<p>907-563-4567 or 800-525-9094</p>
+		</div>
+		<div id="footer_sitemap">
+    		<nav aria-label="quick menu">
+			<dl id="fsm">
+				<dt><a href="/share/">Checking and Savings</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/share/checking.asp">Checking accounts</a></li>
+					<li><a href="/share/savings.asp">Savings accounts</a></li>
+					<li><a href="/share/moneymarket.asp">Money market accounts</a></li>
+					<li><a href="/share/certificates.asp">Certificate accounts</a></li>
+					<li><a href="/share/iras.asp">Individual retirement accounts (IRA)</a></li>
+					<li><a href="/share/hsa.asp">Health Savings Account</a></li>
+					<li><a href="/share/debit.asp">ATM &amp; Visa Debit Card</a></li>
+					</ul>
+				</dd>
+				<dt><a href="/share/">Loans &amp; Credit Cards</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/loans/visaPlatinum.asp">Visa<sup>&reg;</sup> Credit Cards</a></li>
+					<li><a href="/loans/vehicle.asp">Car &amp; Truck Loans</a></li>
+					<li><a href="/loans/offroad.asp">Motorcycle Loans</a></li>
+					<li><a href="/loans/offroad.asp">ATV &amp; Snowmachine Loans</a></li>
+					<li><a href="/loans/rv.asp">Recreational Vehicle Loans</a></li>
+					<li><a href="/loans/vessels.asp">Boat &amp; Vessel Loans</a></li>
+					<li><a href="/loans/aircraft.asp">Aircraft Loans</a></li>
+					<li><a href="/loans/signature.asp">Signature Loans</a></li>
+					<li><a href="/loans/creditline.asp">Credit Line</a></li>
+					<li><a href="/loans/pledgeOfShares.asp">Pledge of Shares</a></li>
+					<li><a href="/loans/pledgeOfCertificate.asp">Pledge of Certificate</a></li>
+					</ul>
+				</dd>
+
+				<dt><a href="/realestate/">Home Loans</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/realestate/#mortgage">Mortgage Loans</a></li>
+					<li><a href="/exit.asp?id=aumcTeam">Contact a Mortgage Originator</a></li>
+					<li><a href="/realestate/#other">Home Equity Line of Credit</a></li>
+					<li><a href="/realestate/#other">Home Improvement Loans</a></li>
+					<li><a href="/realestate/#other">Residential Equity Loans</a></li>
+					<li><a href="/realestate/#other">Residential Lot Loans</a></li>
+					<li><a href="/realestate/#other">Recreational Property Loans</a></li>
+					</ul>
+				</dd>
+
+				<dt><a href="/insurance/">Insurance</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/insurance/personal/">Protect Your Vehicles</a></li>
+					<li><a href="/insurance/personal/property.asp">Protect Your Home</a></li>
+					<li><a href="/insurance/members/">Programs for Alaska&nbsp;USA Members</a></li>
+					<li><a href="/insurance/members/gap.asp">Asset Protection (GAP)</a></li>
+					<li><a href="/insurance/members/paymentprotection.asp">Payment Protection</a></li>
+					</ul>
+				</dd>
+
+				<dt><a href="/business.asp">Business Services</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/business/accounts.asp#checking">Checking</a></li>
+					<li><a href="/business/#other">Visa Debit Card</a></li>
+					<li><a href="/business/#merchant">Card Processing</a></li>
+					<li><a href="/business/#deposit">Depository Services</a></li>
+					<li><a href="/business/onlineaccess.asp#UBBE">UltraBranch&reg; Business Edition</a></li>
+					<li><a href="/business/loans.asp">Business &amp; Commercial Loans</a></li>
+					<li><a href="/business/resources.asp">Resources</a></li>
+					</ul>
+				</dd>
+
+				<dt><a href="/service/">Service Network</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/service/branches.asp">Branches</a></li>
+					<li><a href="/service/atms.asp">ATMs</a></li>
+					<li><a href="/service/ultrabranch/">Online Account Access</a></li>
+					<li><a href="/service/contact.asp#msc">Member Service Center</a></li>
+					<li><a href="/service/contact.asp">More Contact Information</a></li>
+					<li><a href="/current/rates/sharerates.asp">Rates</a> &amp; <a href="/service/fees/default.asp">Fees</a></li>
+					<li><a href="/service/faq.asp">Frequently Asked Questions</a></li>
+					<li><a href="/service/search.asp">Search Alaska&nbsp;USA</a></li>
+					<li><a href="/service/security/">Fraud &amp; ID Theft</a></li>
+					<li><a href="/service/security/privacy.asp">Privacy</a> &amp; <a href="/service/security/security.asp">Security</a></li>
+					<li><a href="/service/help/">Educational Resources</a></li>
+					</ul>
+				</dd>
+
+				<dt><a href="/about/">About Alaska&nbsp;USA</a></dt>
+				<dd>
+					<ul>
+					<li><a href="/about/pressreleases.asp">Press Releases</a></li>
+					<li><a href="/about/publications.asp">Publications</a></li>
+					<li><a href="/about/membership.asp">Membership</a></li>
+					<li><a href="/about/employment.asp">Employment Opportunities</a></li>
+					<li><a href="/about/officials.asp">Credit Union Officials</a></li>
+					<li><a href="/about/history.asp">History of Alaska&nbsp;USA</a></li>
+					</ul>
+				</dd>
+			</dl>
+    		</nav>
+		</div>
+		<div id="footer_legal">
+			<p>&#169; Copyright 2022</p>
+			<p>Alaska&nbsp;USA and UltraBranch are registered trademarks of Alaska&nbsp;USA Federal Credit Union.</p>
+			<p><a href="/service/contact.asp">If you are using a screen reader and having difficulties with the site, call the Member Service Center 24/7 at 800-525-9094.</a></p>
+			<p>Real Estate loans are provided by Alaska USA Federal Credit Union in Alaska, Arizona, Washington, NMLS ID #409001. Mortgage loans are provided by Alaska&nbsp;USA Federal Credit Union in Arizona, NMLS ID #409001. Mortgage loans are provided by Alaska&nbsp;USA Mortgage Company, LLC in Alaska, Washington and California. License #AK157293; Washington Consumer Loan Company License #CL-157293; Licensed by the Department of Financial Protection and Innovation under the California Residential Mortgage Lending Act, License #4131067.</p>
+			<p>Products offered through Alaska USA Insurance Brokers, LLC, are provided by various carriers and are an obligation of the issuing company. They are not obligations of or deposits to Alaska USA Federal Credit Union or its subsidiaries, and are not insured by the National Credit Union Administration or any other agency of the United States. Some products not available in all states. California Insurance License # OF41797.</p>
+			<ul class="bug">
+				<li><a href="/exit.asp?id=ncusif" class="ext"><img src="/images/nav/ncua.png" width="146" height="65" alt="Member accounts insured up to $250,000 by NCUA"><br>Federally insured by NCUA</a></li>
+				<li><img src="/images/nav/EHL.png" width="55" height="59" alt="Equal Housing Lender">&nbsp;</li>
+			</ul>
+		</div>
+	</div><!--#footer-->
+	<div id="topLink"><a href="#pgBody"><span class="visuallyhidden">top</span></a></div>
+</div> <!--#siteFooter-->
+<div class="main_overlay"></div>
+	<div class="modal" id="siteExit" style="display:none;">
+		<div class="col">
+			<h3>Leaving alaskausa.org</h3>
+			<a class="modal_close" href="#" role="button"><span class="AkusaIcon-cancel-x"><span class="visuallyhidden">Close</span></span></a>
+			<p>You are about to visit a third-party website not&nbsp;operated by Alaska&nbsp;USA Federal Credit Union.</p>
+			<p>Alaska&nbsp;USA Federal Credit Union is not responsible for the product, service, or website content on any external third-party sites and does not represent either you or the website operator if you enter into a transaction.&nbsp;  Alaska&nbsp;USA Federal Credit Union's privacy and security policies do not apply to the linked site.</p>
+			<p class="center"><a id="continue" class="linkBtn" href="#">Continue</a></p>
+		</div>
+	</div>
+
+<script>// all ub-related js is collected in the ub object
+var ub={
+	fG : document.getElementById("SignInGlobal"),
+	fM : document.getElementById("SignInMobile"),
+	fH : document.getElementById("SignInHome"),
+	fU : document.getElementById("SignInUB"),
+	fW : document.getElementById("SignInWebpay"),
+	fO : document.getElementById("SignInOAO"),
+//	f : fH || fG || fM || fU ,//"either fG or fH depending on context"
+	/*invalidChars : " ,'`&?<>/\\\|[]:;~!*\"" */
+	invalidChars : String.fromCharCode(32,44,39,96,38,63,60,62,47,92,124,91,93,58,59,126,33,42,34),
+	Initialize : function(){ } ,
+	CheckEntries : function(event){
+		if (event.keyCode == 13){
+			if (ub.f.UserName.value.length === 0) {ub.f.UserName.focus();}
+		}
+	},
+	
+	DoSubmit : function (e){// Validate userid against nonsensical, invalid or empty submissions
+		e=e || window.event;
+		var f=e.target || e.srcElement;
+		var username = f.UserName.value.replace(/^\s+|\s+$/g, "");
+		if(username.length===0 || username.toLowerCase()=="user id"){
+			window.alert("Please enter your User ID");
+			f.UserName.focus();
+			return false;
+		}
+		if(ub.hasInvalidChar(username)){
+			window.alert("User ID contains an invalid character.");
+			f.UserName.focus();
+			return false;
+		}
+		f.Referrerfield.value = document.referrer;
+		f.UserName.value = username;
+		return true;
+	},
+	hasInvalidChar : function(str){
+		for(var c=0;c<ub.invalidChars.length;c++){
+			if(str.indexOf(ub.invalidChars.charAt(c)) > -1){ return true; }
+		}
+		return false;
+	}
+};
+if(ub.fG){
+	ub.fG.onsubmit=ub.DoSubmit;
+	ub.fG.setAttribute("autocomplete","off");
+}
+if(ub.fM){
+	ub.fM.onsubmit=ub.DoSubmit;
+	ub.fM.setAttribute("autocomplete","off");
+}
+if(ub.fH){
+	ub.fH.onsubmit=ub.DoSubmit;
+	ub.fH.setAttribute("autocomplete","off");
+//	ub.fH.UserNameHome.focus();
+}
+if(ub.fU){
+	ub.fU.onsubmit=ub.DoSubmit;
+	ub.fU.setAttribute("autocomplete","off");
+}
+if(ub.fW){
+	ub.fW.onsubmit=ub.DoSubmit;
+	ub.fW.setAttribute("autocomplete","off");
+}
+if(ub.fO){
+	ub.fO.onsubmit=ub.DoSubmit;
+	ub.fO.setAttribute("autocomplete","off");
+}
+
+</script>
+
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="/js/jsSuite-1.9.6.js"></script>
+<script src="/js/jquery.accAccordion.js"></script>
+<script src="/js/jquery.leanModal.AKUSA.2.1.js"></script>
+<script>
+function lmMini(e){
+	e=e || window.event;
+	var t=(e.target || e.srcElement);
+	var $lm=$(t).closest(".learnMore");
+	$lm.toggleClass("active");
+	//return false;
+}
+// Toggle controls
+function loadToggle (){
+	var h=location.hash.replace("#","");
+	if(h !== ""){
+		$("#" + h).addClass("show");
+	}
+}
+function toggleContent (e){
+	e = e || window.event;
+	var tgtEl=e.target || e.srcElement;
+	$(tgtEl).closest(".toggle").toggleClass("show");
+	return false;
+}
+function toggleList (e){
+	e = e || window.event;
+	var tgtEl=e.target || e.srcElement;
+//	alert($(tgtEl).closest("dt")[0]);
+	$(tgtEl).closest("dt").toggleClass("show");
+	return false;
+}
+
+var resizePreviousView = "";
+function handleResize() {
+	var resizeCurrentView = window.innerWidth < 768 ? "m" : "d";
+	if (resizeCurrentView == resizePreviousView) { return true; }	//only trigger this event when we switch modes, chrome fires resize on keyboard pop which breaks superfish
+	else { resizePreviousView = resizeCurrentView; }
+
+	if (window.innerWidth < 768) {
+		$(".shortcuts").addClass("hide");
+		$("ul.tools").appendTo($(".flyin"));
+		$("ul.sections").appendTo($(".flyin"));
+		$(".globalNav").appendTo($(".flyin"));
+		$(".flyin .tools #ubMenu div.menu").prependTo($("#persistentLogin"));
+		$("#navBar").hide();	//do this here so non-js browsers still see it.  need to hide because it is over the top of the mobileMenu
+		if ($(".globalNav .menu > li .close").length == 0) {
+			$(".globalNav .menu").prepend("<a class='close'><span class='AkusaIcon-cancel-x'><span class='visuallyhidden'>Close<\/span><\/span><\/a>")
+			$(".globalNav .menu .close")
+				.off('click')
+				.on('click', function () {
+					$(this).closest((".globalNav > li")).superfish('hide');
+					return false;
+				});
+		}
+		//always unbind before binding so we don't have multiple events
+		$('#homeAccBtn').show().off('click').on('click', function () {
+			//$(".accordion").toggleClass("hide");
+			$(".menu", "#persistentLogin").fadeToggle('fast');
+			$('#homeAccBtn').toggleClass('active');
+			//$('#persistentLogin').slideToggle(); //toggleClass('hide');
+			return false;
+		});
+		$('#persistentLogin .close').off('click').on('click', function () {
+			$(".menu", "#persistentLogin").fadeToggle('fast');
+			$('#homeAccBtn').toggleClass('active');
+			return false;
+		});
+	}
+	else {
+		//undo the things we moved around in the phone-only section
+		$(".shortcuts").removeClass("hide");
+		$("ul.sections").appendTo($(".siteHeader > div")[0]);
+		$("div.menu", "#persistentLogin").appendTo("ul.tools #ubMenu");	//put the login back;
+		if($("#ubMenu").is(".sfHover")){
+			$("#ubMenu > .menu").css("display","block");
+		} else {
+			$("#ubMenu > .menu").css("display","none");
+		}
+		$("ul.tools").appendTo($(".siteHeader > div")[0]);
+		$(".globalNav").prependTo($("#navBar"));
+		$("#navBar").show();
+		$('#homeAccBtn').hide();
+		$(".globalNav .menu > li a.close").remove();
+		//$(".shortcuts").toggleClass("hide");
+
+		//desktop only
+		//$('a[class*=leanModal]').lnModalExt({ top: "center" });
+
+	}
+}
+
+$(document).ready(function() {
+	handleResize();
+	$(window).on("resize",handleResize);
+	$(".main_overlay").on("click",toggleSideMenu);
+	$('ul.tools').superfish({ delay: 0, speed: 'fast', animation: { opacity: 'show' }, autoArrows: false }).sfAria();
+	$("ul.globalNav").superfish({ delay: 0, speed: 'normal', animation: { opacity: 'show' }, autoArrows: false, onShow: slideMenuIntoView }).sfAria();
+	$(".learnMore h2").on("click", lmMini);
+	$(".toggleTitle a").on("click", toggleContent);
+	$("#fsm").accAccordion({allowAllClosed : true,allowMultipleOpen : false});
+
+	$(".tabSet").tabSet();
+	// bind a click event to the 'skip' link to enable proper behaviof in IE
+	$(".skipLinks a").on("click",function(event){
+	    var skipTo="#"+this.href.split('#')[1];
+	    $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+	        $(this).removeAttr('tabindex');
+	    }).trigger("focus"); // focus on the content container
+	});
+	$('.flyin').sideMenuAria({btnContainer:'#navMenuBtn',menuContainer:'.flyin'});
+	$('a[class*=leanModal]').lnModalExt();
+	addDisclosureToExternalLinks();
+});
+</script>
+
+<script>
+function toggleSideMenu(){
+	$("#pgBody").toggleClass("active");
+	if($('#pgBody').hasClass('active')){
+		$(".flyin").height(document.body.clientHeight);
+		$(".main_overlay").height(document.body.clientHeight);
+		$(".flyin .tools li>a").first().trigger("focus");
+	}
+	return false;
+}
+
+// used for superfish menu attached to .globalNav.  For onShow, "this" is the opened ul
+function slideMenuIntoView() {
+	if($(this).offset().top < window.scrollY) {
+		var menuItem = $(this).closest("li");
+		var newTop = $(menuItem).offset().top + $(menuItem).height() - window.innerHeight;
+		if($(menuItem).attr("id") == "search") { newTop = $(menuItem).offset().top; } //they'll probably pop the keyboard. give them lots of room
+		if(newTop < 0) { newTop = 0; }
+		$("html, body").animate({
+			scrollTop: newTop
+		},500);
+	}
+}
+
+function addDisclosureToExternalLinks(){
+	var AkusaDomains = [
+		"alaskausa.org","alaskausamortgage.com","procuramortgage.com","alaskausatitle.com",
+		"akusaapps","purchaseone.org","alaskausafoundation.org"
+	];
+	var AffiliateDomains = [
+		"public.isillc.com","tools.safeco.com","careers-alaskausa.icims.com","scorecardrewards.com","iraservicecenter.com"
+	];
+	// Test absoluteURL links in main:
+	//		header doesn't contain external links, and those in footer are already marked as .ext
+	//		Also don't text links that have been manually tagged ".ext, .aff, .akusa" (external,affiliate,akusa)
+	$("main a[href^='http']").not(".ext, .aff, .akusa").each(function(){
+		// tag links .akusa,.aff, or .ext (the rest)
+		var i,len,cls="ext";
+		for(i=0,len=AkusaDomains.length; i<len ; i++){
+			if(this.href.toLowerCase().indexOf(AkusaDomains[i])>-1){
+				cls="akusa";
+				break;
+			}
+		}
+		if(cls=="ext"){
+			for(i=0,len=AffiliateDomains.length; i<len ; i++){
+				if(this.href.toLowerCase().indexOf(AffiliateDomains[i])>-1){
+					cls="aff";
+					break;
+				}
+			}
+		}
+		$(this).addClass(cls);
+	});
+	// now activate lnModalExt on all external links
+	$("a.ext").attr("data-modal-alert","true").lnModalExt().on("click",function(e){
+		$("#continue")[0].href=$(this)[0].href;
+		$("#continue").closest(".modal").find(".modal_close").trigger("focus");
+		$("#continue").trigger("focus");
+	});
+}
+</script>
+
+<script>
+function eStatementSignup(){
+   if(resizePreviousView=='m'){
+      $('#persistentLogin > .menu').show();
+   }
+   document.getElementById('UserNameGlobal').removeAttribute('disabled');
+   $('#ubMenu').toggleClass('sfHover');
+   $('#sfa-menu_ubMenu').show();
+   $('#sfa-btn_ubMenu').attr('aria-expanded',true);
+   if($('.esLT').length == 0){
+      $('.ubForm .login').append('<input type="hidden" class="esLT" name="LoginTarget" value="EStatements">');
+   }
+   document.getElementById('UserNameGlobal').focus();
+   return false;
+}
+</script>
+
+
+</div><!-- #pgBody -->
+</body>
+</html>
+

@@ -1,0 +1,227 @@
+/*ControlStyles_v3
+Modified 10/17/2007 by jw
+This file contains css designed to fix the appearance of .net controls, and to support our own custom 
+.net controls
+1-11-11 JW updated for .net 4.0 styling
+*/
+
+
+/*default display of an AKUSA:InfoBox popup div*/
+/*.InfoBox { display:none; position:absolute;  text-align:left; padding:3px; background-color:#F0F0F0; border:1px solid gray; }
+.InfoBoxHover { display:block; }*/
+.InfoBox { text-align:left; padding:3px; background-color:#F0F0F0; border:1px solid gray;display:block; }
+.InfoBoxCanvas { display:none; position:absolute; z-index:11; background:transparent; }
+.InfoBoxHover { display:block; }
+.InfoBoxPopup { display:block; }
+.InfoBoxTemp { display:block; visibility:hidden; }  /*used for giving the infoBox display so it has height/width --- must be at the bottom of the list */
+.InfoBox_CloseImage { float:right; cursor:pointer; }    /*the X inside the infobox */
+.InfoBox_OpenImage { cursor:pointer; border:none; }     /*the image which opens the infobox */
+
+.modalBackground{background:#777777; filter:alpha(opacity=75);-moz-opacity:.75;opacity:.75; cursor:wait;}
+
+
+.ajax__calendar_container{z-index:999;}/*this doesnt render properly, needs to be bumped to the front*/
+
+.progressBar .visited{border-top:2px solid #000099;font-weight:bold;color:#595959;font-size:.8em;padding-left:2px;}
+
+.progressBar .active{border-top:2px solid #000099;font-weight:bold;font-size:1.1em;color:#000099;font-size:.8em;padding-left:12px;background:#F0F0F0 url(ControlImages/diamond.gif) no-repeat 0px 3px;}
+
+.progressBar .unvisited{border-top:1px solid #808080;font-weight:normal;color:#808080;font-size:.8em;padding-left:2px;}  
+
+
+/* tabbar rendering reference 
+<table class="akusatabbar">
+    <tr>
+        <td>
+            <table class="active/inactive"><tr><td><a>tab text</a></td></tr></table>
+        </td>
+        <td>
+            ...
+        </td>
+        ...
+        
+main body has the following
+<div class="tabsAbove"    provides the thick border (asp:menu is not 100% width and looks bad with it)
+        */
+        
+.unsorted a{display:block;color:Blue;text-decoration:none; background:url(ControlImages/ColumnSorting/NormalArrow.gif)  right center no-repeat; padding-right:15px;}
+.sortDescending a{display:block;color:Blue;text-decoration:none; background:url(ControlImages/ColumnSorting/UpArrow.gif) right center no-repeat; padding-right:15px;}
+.sortAscending a{display:block;color:Blue;text-decoration:none; background:url(ControlImages/ColumnSorting/DownArrow.gif) right center no-repeat; padding-right:15px;}
+/* Expand the link hotspot using Holly-hack fed to I.E. 6- (only) www.positioniseverything.net */
+* html .unsorted a,* html .sortDescending a,* html .sortAscending a {height:1%; }
+        
+.tabsAbove{
+    border-top:4px solid #336699 !important;
+    border-right:1px outset #666666;
+    border-bottom:1px outset #666666;
+    border-left:1px solid gray;
+    background:white;
+    }
+    
+.AKUSATabBar{
+    padding-bottom:0px;
+    font-family: verdana,arial, helvetica 
+    }
+
+.AKUSATabBar td{
+padding-left:7px;
+}
+
+.AKUSATabBar table td{padding:0;}
+
+
+
+.AKUSATabBar table td{ /*the TD of the tab (contains an anchor)  border goes here*/
+    /*no margins here, margins meaningless on a td */
+    padding:0px;
+	border-top:   1px outset #666666;	
+	border-right: 1px outset #666666;	
+	border-left:  1px outset #666666;
+    background:#cccccc;
+    color:black;
+    font-weight:normal;
+    white-space:nowrap;
+    }
+    
+ 
+    
+.AKUSATabBar td a{ /*border not defined for anchor, even with display block (which does enable top/bottom/right padding */
+    padding: 3px 7px 3px 7px;
+    /*no margins here, otherwise mouseover looks really bad */
+	text-decoration:none;
+	background:url(ControlImages/Tabs/tabBackground.gif);
+	color:black;
+	font-weight:normal;
+	display:block;}
+
+
+
+.AKUSATabBar li{ /*the TD of the tab (contains an anchor)  border goes here*/
+    /*no margins here, margins meaningless on a td */
+    padding:0;
+    margin-left:7px;
+	border-top:   1px outset #666666;	
+	border-right: 1px outset #666666;	
+	border-left:  1px outset #666666;
+    background:#cccccc;
+    color:black;
+    font-weight:normal;
+    white-space:nowrap;
+    }
+    
+ 
+    
+.AKUSATabBar li a{ /*border not defined for anchor, even with display block (which does enable top/bottom/right padding */
+    padding: 3px 7px 3px 7px !important;
+    /*no margins here, otherwise mouseover looks really bad */
+	text-decoration:none;
+	background:url(ControlImages/Tabs/tabBackground.gif);
+	color:black;
+	font-weight:normal;
+	display:block;}
+   
+.AKUSATabBar .inActive a{background:url(ControlImages/Tabs/tabBackground.gif);color:black;font-weight:normal;}
+.AKUSATabBar .active a{background:url(ControlImages/Tabs/tabBackgroundActive.gif); font-weight:bold; color:white;}
+.AKUSATabBar a.selected{background:url(ControlImages/Tabs/tabBackgroundActive.gif); font-weight:bold; color:white;}
+
+.AKUSATabBar a:hover{background:#D5E1ED;}
+.AKUSATabBar .active a:hover,.AKUSATabBar a.selected:hover{background:url(ControlImages/Tabs/tabBackgroundActive.gif);}   /*remove hover action for active tab*/
+  
+.wizardStep{padding:5px;}     
+
+.AKUSAWizard
+{
+    background:url(ControlImages/Wizard_Background.gif);
+    margin-bottom:20px;
+    border:1px solid black;
+}
+
+/*ie 6 fix, height=100% is ignored and we need to keep the header at the top*/
+.AKUSAWizard td{vertical-align:top;}
+
+
+.AKUSAWizard .WizardHeader
+{
+    background:url(ControlImages/Tabs/tabBackgroundActive.gif); 
+    font-weight:bold; 
+    color:white;
+    font-size:1.1em;
+    padding:5px;
+}
+
+.AKUSAWizard .WizardStep
+{
+    
+    padding:10px;
+    vertical-align:top;
+}
+/* remove padding from subnav inside a wizardstep */
+.AKUSAWizard .WizardStep .subNav
+{
+    
+    margin-top:-10px;
+    margin-left:-10px;
+    margin-right:-10px;
+}
+
+.AKUSAWizard .WizardButton
+{
+    margin:5px 25px 5px 0;
+}
+
+.AKUSAWizard .WizardSideBar
+{
+    background:#c4bea8;
+    vertical-align:top;
+    padding:0;
+    margin:0;
+
+}
+
+
+
+.WizardSideBar td
+{
+    padding:0;
+}
+
+html>body .WizardSideBar table
+{
+    /* ffox only rule */
+    margin-top:0 !important;
+}
+
+.AKUSAWizard .WizardSideBarButton
+{
+    color:Black;
+    font-size:1.1em;
+    padding:10px;
+    display:block;
+
+    
+}
+
+.AKUSAWizard .WizardSideBarActiveButton
+{
+    color:Black;
+    font-weight:bold;
+    font-size:1.1em;
+    padding:10px;
+    display:block;
+
+    background:url(ControlImages/Wizard_Background.gif);
+}
+
+
+/*Style classes put on page by the GridviewHelper*/
+.GridviewHelper_GroupSummaryRow td{
+    font-weight:bold;
+    background-color:#F2F5A9;
+}
+.GridviewHelper_GroupHeaderRow td{
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+    font-weight:bold;
+}
+
+.checkboxSpacing label { padding-right:5px; }
