@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://www.alaskausa.org/enroll/OnlineEnrollment.aspx -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Online Enrollment_files/alaska-common.js.download"></script>
+<title>Online Enrollment</title>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="stylesheet" href="./Online Enrollment_files/akusafonts.css" title="master">
+	<link rel="stylesheet" href="./Online Enrollment_files/akusa-base.css" title="master">
+	<link rel="stylesheet" href="./Online Enrollment_files/akusa-phone.css" media="(max-width:767px)">
+	<link rel="stylesheet" href="./Online Enrollment_files/akusa-desktop.css" media="all and (min-width:768px)">
+	<link rel="stylesheet" href="./Online Enrollment_files/akusa-print.css" media="print">
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="https://www.alaskausa.org/css/akusa-desktop.css" title="master">
+	<style>#pgBody {width:100%;}</style>
+	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="./Online Enrollment_files/akusa-express.css" title="master">
+	<script src="./Online Enrollment_files/jquery-1.11.3.min.js.download" type="text/javascript"></script>
+	<script src="./Online Enrollment_files/jquery.maskedinput-1.4.1.min.js.download" type="text/javascript"></script>
+	<script src="./Online Enrollment_files/jsSuite-1.8.js.download" type="text/javascript"></script><script id="74241275b89a2b990ca6b0f539d20865" src="./Online Enrollment_files/alaska-common.js(1).download" async=""></script>
+    <style type="text/css">
+    	table {border-collapse:separate;border-spacing:1px 1px;}
+    	th,td {margin:1px; padding:1px;}
+    	input[type="text"],input[type="tel"] {padding:1px 0;}
+    	input[type="radio"],input[type="checkbox"] {margin:3px 5px;}
+						
+		.ubenrollment #header > div:first-child { height:0;display:none; }
+		.ubenrollment .pgTitle h1 { width: 768px; max-width:100%; font-size:1.5em; padding-bottom: .7em; }
+		.ubenrollment .pgTitle .subTitle { font-size:.8em;}
+		.ubenrollment #footer #disclaimers { padding-top:10px;}
+		.ubenrollment #footer .links { text-align:center; }
+		.ubenrollment .leftCol h2 { clear:none;}
+		.ubenrollment .leftCol h2::before { top: 50%; margin-top:-4px; }
+		.ubenrollment .leftCol h3 { clear:none;}
+
+		@media only screen and (max-width: 767px) {
+			.ubenrollment #header { float:left; }	/* undoes mobile header for tablet view*/
+			.ubenrollment #topBar #logo { float:left; }	/*undoes mobile header for tablet view*/
+			.ubenrollment .learnMore { height: auto;}	/*undoes collapse of content in tablet/mobile */
+		}
+
+		@media only screen and (max-width: 479px) {
+			.ubenrollment #header { height: 50px; float:none; } /* puts mobile header back */
+			.ubenrollment #topBar { margin-top:0;} /* puts mobile header back */
+			.ubenrollment #topBar #logo { float:none; } /* puts mobile header back */
+			#headerReturnLink { display:none; }
+		}
+
+		
+		.learnMore ul, .learnMore li { margin: .5em .5em;}
+		.leftCol { 
+			padding: 0 0 0 24px; background: url(https://www.alaskausa.org/css/nav/pgMainEdge.png) repeat-y 8px 0;
+			width: 500px; float:left;
+		}
+		.sideBar { width: 230px; float:left; }
+
+		@media only screen and (max-width: 767px) {
+			.leftCol { float:none; background:none; padding:0;}
+			.sideBar { float:none; }
+		}
+
+		@media only screen and (max-width: 479px) {
+			.leftCol { width: 100%; }
+		}
+
+    </style>
+    	
+	<style>
+		/*.visaDebitQuestionRow, .autoLoanPrimaryQuestionRow, .autoLoanQuestionRow { display:none; }*/
+		/*table th { text-align: left; }*/
+		::-ms-clear { width:0; height:0; }
+
+		#pgMain { width: 800px; }
+		.leftCol { 
+			padding: 0 0 0 24px; background: url(https://www.alaskausa.org/css/nav/pgMainEdge.png) repeat-y 8px 0;
+			width: 500px; float:left;
+		}
+        .leftCol.fullWidth {
+            width: 100%;
+        }
+		.sideBar { width: 230px; float:left; }
+		.mobile_show { display:none; }
+		.mobile_hide { display:block; }
+		.disclosures {
+			height:400px;overflow:auto;background:white;font-size:10pt;font-weight:normal;font-family:Arial;
+			margin:5px 0 0 0;padding:3px;border:1px solid gray;
+		}
+		.disclosures p:not(.disclosureTitle) { text-align:justify;}
+		.disclosureIndent { margin-left:20px;}
+		.checkboxText { margin:5px 0 15px 35px;text-indent:-35px; }
+		.checkboxWarning { margin-left:-6px;}
+		.hint { font-size: .85em; color:#666666;}
+		.results img.resultImage, .resultsPage2 img.resultImage { width:64px; float:left;margin-right:10px;}
+        div.accountSelector {
+            display: inline-block;
+            padding: 5px 5px 1.5em 5px;
+            margin: 1em 1.8em 1em 0;
+            vertical-align: top;
+            width: 16.5em;
+            border-radius: 3px;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+        }
+        div.accountSelector h3 {
+            color: #FFFFFF;
+            background-color: #3F77C0;
+            border-radius: 3px 3px 0 0;
+            margin-top: 0;
+            padding: .3em .6em;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+	    div.accountSelector p {
+            margin: .4em .7em;
+	    }
+        div.accountSelector div.accountSelectorBody {
+            height: 15em;
+        }
+        div.accountSelector span.accountSelectorLabel {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        div.accountSelector div.accountSelectorButton {
+            text-align: center;
+        }
+        div.accountSelector div.accountSelectorButton input {
+            color: white;
+            background-color: #004990;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            margin-top: .5em;
+            padding: .8em .5em;
+            width: 12em;
+        }
+        div.accountSelector div.accountSelectorButton p {
+            font-weight: bold;
+            font-style: italic;
+            padding: .8em 0 .3em 0;
+        }
+	    @media only screen and (max-width: 32.5em) {
+            div.accountSelector { width: 98%; }
+	    }
+
+		@media only screen and (max-width: 767px) {
+			.leftCol { float:none; background:none; padding:0; max-width:100%;}
+			.sideBar { float:none; width:100%; }
+			.checkboxText { margin-left:46px; text-indent:-46px; }
+			/*.checkboxText input[type="checkbox"] { height:auto; }*/	/*text-indent takes care of extra spacing needed for mobile*/
+		}
+
+		@media only screen and (max-width: 500px) { /*iPhone4 landscape is 480px */
+			.leftCol { width: 100%; }
+			.sideBar { width:100%; }
+			.mobile_show { display:block; }
+			.mobile_hide { display:none; }
+			.results img.resultImage, .resultsPage2 img.resultImage { max-width:inherit; } /*undoes .pgMain img in express*/
+			/*a { text-decoration:underline;}*/
+		}
+		@media only screen and (max-height: 400px) {
+			.disclosures { height: 350px; }
+		}
+		@media only screen and (max-height: 325px) {
+			.disclosures { height: 305px; }
+		}
+
+
+		
+		/*from  service/certCalc.asp*/
+		/* dataForm table for standardized data-input presentation - simple 2-col table */
+		.dataForm {width:100%;border-collapse:collapse;margin-bottom:1em;font-size:1em; }
+		.dataForm caption {border-top:1px solid gray;background-color:#f0f0f0;font-weight:bold; text-align:left;padding:6px;}
+		.dataForm tbody tr:first-child td {border-top:1px solid gray;}
+		.dataForm td, .dataForm th {padding:6px;vertical-align:top;text-align:left; border-top:1px solid gray; border-bottom:1px solid gray;}
+		.dataForm thead td {border-top:1px solid gray;border-bottom:1px solid black;background-color:#f4f4f4;font-weight:bold;}
+		.dataForm tbody th {width:40%; background-color:#eeeeee;font-weight:normal;text-align:right;}
+		.dataForm tbody td {border-left:1px solid gray;}
+		.dataForm tbody td:first-child {border-left-width:0;}
+		.dataForm tfoot {font-size:.85em;color:#666666;padding:.5em;}
+		.dataForm tfoot p {margin:.5em 0 0 0;}
+		.dataForm .footnotes {margin:3px 5px;font-size:.85em;}
+
+		.dataForm input {text-align:left;}
+		.dataForm input[type="text"], .dataForm input[type="tel"] {box-sizing:border-box;min-width:30%;}
+		.dataForm input[type="submit"] {border-width:0;border-radius:2px;background-color:#3F77C0;color:white;color:white;font: 100% / 1.4 pt_sans_narrowregular, arial, helvetica, sans-serif;}
+		.dataForm input[type="submit"]:hover {background-color:#345d8f;}
+		.dataForm input[type="radio"] {/*outline:none;*/}
+
+		.dataForm div[role="radiogroup"] {margin-bottom:-6px;}
+		.dataForm div[role="radiogroup"] label {display:inline-block;box-sizing:border-box;min-width:30%;margin:0 5px 6px 0;border:1px solid #cccccc;border-radius:3px;padding:0 5px 0 0px; background-color:#eeeeee;}
+		.dataForm div[role="radiogroup"] label:hover {background-color:#cccccc;color:#000066}
+		.dataForm div[role="radiogroup"] label.radioSelected { background-color:#cccccc; color:#000066; }
+		.dataForm div[role="radiogroup"].stack {float:left;}
+		.dataForm div[role="radiogroup"].stack label {float:left;clear:left;}
+
+		/* dataForm adaptations */
+		@media (max-width:479px){
+			/* auto-convert radiogroups to "stack" format */
+			.dataForm div[role="radiogroup"] label {display:block;margin-right:0;float:none;}
+			.dataForm {border-bottom:1px solid gray;}
+			.dataForm tbody th {display:block;box-sizing:border-box;width:100%;margin-top:3px;border-width:0;border-top:1px solid gray;padding:3px 6px 0;background-color:#ffffff;text-align:left;color:#004990}
+			.dataForm tbody td {display:block;border-width:0;padding-top:0;}
+			.dataForm tbody tr:first-child td {border-top:none;}
+		}
+
+		/*from akusa-desktop - candidates to move to -express*/
+
+
+		/*local overrides*/
+		.dataForm tbody th { /*white-space:nowrap; min-width:235px;*/}
+		.dataForm tfoot td { border:none;}
+		/* split the table so postback is smaller, style the tables to address this*/
+		.topDataForm { margin-bottom:0;}
+		.noTopBorder td, .noTopBorder th { border-top:none !important; }
+		
+		.loadingMsg{background:url(PgArt/spinnerLarge.gif) no-repeat left center; padding-left:45px; display:table }
+		.loadingMsg span{vertical-align:middle;display:table-cell; height:50px;color:#333;}
+		.results { border:1px solid gray; padding:10px; margin-right:15px;}
+		.resultsPage2 { }
+		.visaDebit_background {background:url(visaPlatinum_flat.png) no-repeat;background-size:100% auto; height:126px; width:200px;}
+		.visaDebit_input { margin-top:70px;margin-left:80px;width:95px; }
+		.visaDebit_background2 {background:url(./Online Enrollment_files/visaPlatinum_icon.png) no-repeat;background-size:100% auto; height:126px; width:200px;}
+		.visaDebit_input2 { margin-top:68px;margin-left:82px;width:89px; }
+        .ubLoginForm input[type=text] { width: 100px; border: 1px solid #bcbcbc; padding: 0 5px; border-radius:2px; min-height:26px;}
+        .ubLoginForm input[type=submit] { min-height:29px; }
+						
+		/*from https://www.alaskausa.org/service/download.asp?t=q*/
+		a.pdf {
+			padding-left: 20px;
+			background: url(https://www.alaskausa.org/images/icons/acrobat.gif) no-repeat 0 50%;
+			line-height: 1.5em; padding-top:1px;
+		}
+		.printLink {
+			background: url(/App_Themes/DefaultTheme/TemplateImages/printicon.gif) no-repeat 0 0; padding-left: 18px;
+			font-size:.8em; font-weight:normal; margin-top:10px; line-height:16px;
+		}
+
+		/*begin css spinner: http://lea.verou.me/2013/11/cleanest-css-spinner-ever/ */
+			@keyframes spin {
+				to { transform: rotate(1turn); }
+			}
+			.progress {
+				position: relative;
+				display: inline-block;
+				width: 5em;
+				height: 5em;
+				margin: -6px .5em;
+				font-size: 12px;
+				text-indent: 999em;
+				overflow: hidden;
+				animation: spin 1s infinite steps(8);
+			}
+			.small.progress {
+				font-size: 5px;
+			}
+			.large.progress {
+				font-size: 24px;
+			}
+			.progress:before,
+			.progress:after,
+			.progress > div:before,
+			.progress > div:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 2.25em; /* (container width - part width)/2  */
+				width: .5em;
+				height: 1.5em;
+				border-radius: .2em;
+				background: #eee;
+				box-shadow: 0 3.5em #eee; /* container height - part height */
+				transform-origin: 50% 2.5em; /* container height / 2 */
+			}
+			.progress:before {
+				background: #555;
+			}
+			.progress:after {
+				transform: rotate(-45deg);
+				background: #777;
+			}
+			.progress > div:before {
+				transform: rotate(-90deg);
+				background: #999;
+			}
+			.progress > div:after {
+				transform: rotate(-135deg);
+				background: #bbb;
+			}
+		/*end css spinner*/
+
+	</style>
+
+<link href="./Online Enrollment_files/_ControlStyles_v4.css" type="text/css" rel="stylesheet"><link href="./Online Enrollment_files/_ExternalTemplateStyles_v4.css" type="text/css" rel="stylesheet"><link href="./Online Enrollment_files/_UtilityStyles_v4.css" type="text/css" rel="stylesheet"><script type="text/javascript">
+//<![CDATA[
+function Length_Validation(val)
+{
+var t = document.getElementById(val.controltovalidate); //element for control in question
+var v = t.value.replace(/\n/g,'  '); //text value of the control (need to double count new lines)
+ if (v.length>val.MaximumLength) 
+ {return false;}
+ else
+ {return true;}
+}
+//]]>
+</script><script type="text/javascript">$(document).ready(function() { console.log('ready');SetAriaLabels_FormRows();SetAriaLabels_FormColumns();AriaFixWrappedElements();setTimeout(SetAriaForValidators,1000); });</script><script type="text/javascript">PrefsFormsLib.ApplicationRoot = '/enroll/';</script><script type="text/javascript">$(document).ready(function(){initializeVisaMask();reselectAllRadios();$("#visaDebitCardNumber").focus();})</script><script type="text/javascript">Array.add(Sys.WebForms.PageRequestManager.getInstance()._onSubmitStatements, function() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+
+return true;
+});
+</script></head>
+<body id="ctl00_ctl00_Body" class="ubenrollment webpayment">
+	<div class="pgBody">
+		<form method="post" action="https://www.alaskausa.org/enroll/OnlineEnrollment.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+
+
+
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Online Enrollment_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Online Enrollment_files/md5.js.download" type="text/javascript"></script>
+<script src="./Online Enrollment_files/ScriptResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function Length_Validation(val)
+{
+var t = document.getElementById(val.controltovalidate); //element for control in question
+var v = t.value.replace(/\n/g,'  '); //text value of the control (need to double count new lines)
+ if (v.length>val.MaximumLength) 
+ {return false;}
+ else
+ {return true;}
+}
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+ function ValidateCaptcha(sender,args)
+ {   var correctMD5='75EEC5A819FD971E63A55C466A36211C';
+     correctMD5=correctMD5.toLowerCase();
+if(hex_md5(document.forms[0].ctl00$ctl00$PageBody$PageContent$Captcha.value.toLowerCase()).toLowerCase()==correctMD5)
+     {args.IsValid=true;}
+     else{args.IsValid=false;}
+ }
+function TogglePersistantPopup(InfoBoxClientID,TriggerElementID,direction,popupSpacing) {
+   var IframeElement = document.getElementById(InfoBoxClientID + '_IFrame');
+   var PopUpElement = document.getElementById(InfoBoxClientID + '_PopupCanvas');
+	var PopUpDiv = $('#'+InfoBoxClientID + '_PopupDiv');
+	var PopUpCanvas = $('#'+InfoBoxClientID + '_PopupCanvas');
+   var PopupStatus = '' + document.getElementById(InfoBoxClientID + '_PopupDiv').style.display;
+   if(PopUpDiv.hasClass('InfoBoxHover')) 
+   {
+       PopUpCanvas.removeClass('InfoBoxHover'); //remove hover effect
+	    if(PopUpElement.style.display=='block'){
+	       PopUpElement.style.display='';
+	       $(PopUpElement).removeClass('InfoBoxPopup');
+	    }
+	    else {
+           SetPositionForPopup(InfoBoxClientID,TriggerElementID,direction,popupSpacing);
+	        PopUpElement.style.display='block';
+	        $(PopUpElement).addClass('InfoBoxPopup');
+	    }
+   }
+	else if(IframeElement) { //iframe hack is on, use basic css display manipulation (doesnt work with slidetoggle)
+	    if(PopUpElement.style.display=='block'){
+	        PopUpElement.style.display='';
+	        $(PopUpElement).removeClass('InfoBoxPopup');
+	    }
+	    else {
+           SetPositionForPopup(InfoBoxClientID,TriggerElementID,direction,popupSpacing);
+	        PopUpElement.style.display='block';
+	        $(PopUpElement).addClass('InfoBoxPopup');
+	    }
+       IframeElement.style.display = PopUpElement.style.display;
+       IframeElement.style.width = PopUpElement.offsetWidth;
+       IframeElement.style.height = PopUpElement.offsetHeight;
+       IframeElement.style.left = PopUpElement.offsetLeft;
+       IframeElement.style.top = PopUpElement.offsetTop;
+	}
+	else{ //use the fancy slideToggle animation
+       var callback = function(){
+                   if($(PopUpElement).hasClass('InfoBoxPopup')){
+                       $(PopUpElement).removeClass('InfoBoxPopup');
+                       $(PopUpElement).css('display','');  //undo the block set before the animation,clear out the inline display set by slideToggle, let the InfoBoxCanvas set the display
+                   }
+                   else{
+                       $(PopUpElement).addClass('InfoBoxPopup');
+                   }
+               }
+       if(!PopUpCanvas.hasClass('InfoBoxPopup')) { SetPositionForPopup(InfoBoxClientID,TriggerElementID,direction,popupSpacing); }
+       if(PopUpCanvas.hasClass('InfoBoxHover')) {                // turn a hover into a popup - this just turns it on, no fancy slideToggle
+               $(PopUpElement).addClass('InfoBoxPopup').removeClass('InfoBoxHover');
+       } else {
+           if(direction == 5) {
+               PopUpCanvas.css('overflow','hidden').css('display','block');PopUpDiv.css('width',PopUpDiv.width()).animate({marginLeft:parseInt(PopUpDiv.css('marginLeft'),10)==0 ? -PopUpDiv.outerWidth() : 0},callback);
+           }
+           else if(direction == 7) {
+               PopUpCanvas.css('overflow','hidden').css('display','block');
+               PopUpDiv.css('width',PopUpDiv.width()).animate({marginLeft:parseInt(PopUpDiv.css('marginLeft'),10)==0 ? PopUpDiv.outerWidth() : 0},callback);
+           }
+           else {
+	            PopUpCanvas.slideToggle(callback);
+           }
+       }	}
+}
+function HideInfoBoxHover(InfoBoxClientID,TriggerElementID,direction,popupSpacing) {
+   var IframeElement = document.getElementById(InfoBoxClientID + '_IFrame');
+   var PopUpElement = document.getElementById(InfoBoxClientID + '_PopupCanvas');
+	var PopUpCanvas = $('#'+InfoBoxClientID + '_PopupCanvas');
+	var PopUpDiv = $('#'+InfoBoxClientID + '_PopupDiv');
+	if(IframeElement) { //iframe hack is on, use basic css display manipulation (doesnt work with slidetoggle)
+	    $(PopUpElement).removeClass('InfoBoxHover');
+       IframeElement.style.display = 'none';
+       IframeElement.style.width = PopUpElement.offsetWidth;
+       IframeElement.style.height = PopUpElement.offsetHeight;
+       IframeElement.style.left = PopUpElement.offsetLeft;
+       IframeElement.style.top = PopUpElement.offsetTop;
+	}
+	else{
+	    $(PopUpElement).removeClass('InfoBoxHover');
+	}
+}
+function ShowInfoBoxHover(InfoBoxClientID,TriggerElementID,direction,popupSpacing) {
+   var IframeElement = document.getElementById(InfoBoxClientID + '_IFrame');
+   var PopUpElement = document.getElementById(InfoBoxClientID + '_PopupCanvas');
+	var PopUpCanvas = $('#'+InfoBoxClientID + '_PopupCanvas');
+	var PopUpDiv = $('#'+InfoBoxClientID + '_PopupDiv');
+   //if not a persistant popup...//var PopupStatus = '' + document.getElementById(InfoBoxClientID + '_PopupDiv').style.display;
+   if(!$(PopUpElement).hasClass('InfoBoxPopup')){
+       SetPositionForHover(InfoBoxClientID,TriggerElementID,direction,popupSpacing);
+	    if(IframeElement) { //iframe hack is on, use basic css display manipulation (doesnt work with slidetoggle)
+	        $(PopUpElement).addClass('InfoBoxHover');
+           IframeElement.style.display = 'block';
+           IframeElement.style.width = PopUpElement.offsetWidth;
+           IframeElement.style.height = PopUpElement.offsetHeight;
+           IframeElement.style.left = PopUpElement.offsetLeft;
+           IframeElement.style.top = PopUpElement.offsetTop;
+	    }
+	    else{
+	        $(PopUpElement).addClass('InfoBoxHover').children(':first').css('margin-left','');
+	    }
+	}
+}
+function SetPositionForHover(InfoBoxClientID,TriggerElementID,direction,popupSpacing) {
+	var PopUpDiv = $('#'+InfoBoxClientID + '_PopupDiv');
+	var PopUpCanvas = $('#'+InfoBoxClientID + '_PopupCanvas');
+	var TriggerElement = $('#'+TriggerElementID);
+	var triggerOffset = TriggerElement.position();
+	var imgHeight = TriggerElement.height();
+	var imgWidth = TriggerElement.width();
+	var viewportWidth = $(window).width();
+	var viewportHeight = $(window).height();
+	var divWidth = PopUpCanvas.width();
+	var divHeight = PopUpCanvas.height();//alert(divWidth + '...' + divHeight);
+   SetPosition(PopUpCanvas,direction,popupSpacing,triggerOffset,imgHeight,imgWidth,divHeight,divWidth);
+}
+function SetPositionForPopup(InfoBoxClientID,TriggerElementID,direction,popupSpacing) {
+	var PopUpDiv = $('#'+InfoBoxClientID + '_PopupDiv');
+	var PopUpCanvas = $('#'+InfoBoxClientID + '_PopupCanvas');
+	var TriggerElement = $('#'+TriggerElementID);
+	var triggerOffset = TriggerElement.position();
+	var imgHeight = TriggerElement.height();
+	var imgWidth = TriggerElement.width();
+	var viewportWidth = $(window).width();
+	var viewportHeight = $(window).height();
+   PopUpCanvas.addClass('InfoBoxTemp'); //turn in on, but keep it hidden so height,width exist
+   PopUpDiv.addClass('InfoBoxTemp'); //turn in on, but keep it hidden so height,width exist
+	var divWidth = PopUpCanvas.width();
+	var divHeight = PopUpCanvas.height();
+   //check if the infobox is bigger than the viewport, if so shrink it
+   if(viewportWidth<divWidth){
+       PopUpCanvas.width(viewportWidth);
+       divWidth = PopUpCanvas.width();
+   }
+   PopUpCanvas.removeClass('InfoBoxTemp'); //back to what they started at
+   PopUpDiv.removeClass('InfoBoxTemp'); //back to what they started at
+   SetPosition(PopUpCanvas,direction,popupSpacing,triggerOffset,imgHeight,imgWidth,divHeight,divWidth);
+   RePosition(PopUpCanvas,PopUpDiv,divHeight,divWidth);
+}
+function SetPosition(PopUpCanvas,direction,popupSpacing,triggerOffset,imgHeight,imgWidth,divHeight,divWidth) {
+	var viewportWidth = $(window).width();
+	var viewportHeight = $(window).height();
+	if(direction == 4) {
+		PopUpCanvas.css('top',triggerOffset.top).css('left',triggerOffset.left+imgWidth+popupSpacing)
+	}
+	else if(direction == 5) {
+		PopUpCanvas.css('top',triggerOffset.top+(imgHeight/2)-(divHeight/2)).css('left',triggerOffset.left+imgWidth+popupSpacing)
+	}
+	else if(direction == 6) {
+       //use bottom to slide up for slideToggle, clear out top that RePosition may set=
+		PopUpCanvas.css('top','').css('left',triggerOffset.left+imgWidth+popupSpacing).css('bottom',viewportHeight-triggerOffset.top-imgHeight-popupSpacing);
+	}
+	else if(direction == 7) {
+		PopUpCanvas.css('top',triggerOffset.top+(imgHeight/2)-(divHeight/2)).css('left',triggerOffset.left-divWidth-popupSpacing)
+	}
+	else if(direction == 8) {
+       //use bottom to slide up for slideToggle, clear out top that RePosition may set=
+		PopUpCanvas.css('top','').css('left',triggerOffset.left+(imgWidth/2)-(divWidth/2)).css('bottom',viewportHeight-triggerOffset.top+popupSpacing); 
+	}
+	else if(direction == 1) {
+		PopUpCanvas.css('top',triggerOffset.top+imgHeight+popupSpacing).css('left',(triggerOffset.left+imgWidth)-divWidth)
+	}
+	else if(direction == 3) {
+		PopUpCanvas.css('top',triggerOffset.top+imgHeight+popupSpacing).css('left',triggerOffset.left+(imgWidth/2)-(divWidth/2))
+	}
+	else {
+	    // this is BottomRight
+		PopUpCanvas.css('top',triggerOffset.top+imgHeight+popupSpacing).css('left',triggerOffset.left)
+	}
+}
+function RePosition(PopUpCanvas,PopUpDiv,divHeight,divWidth) {
+	var viewportWidth = $(window).width();
+	var viewportHeight = $(window).height();
+	var viewportScrollTop = $(window).scrollTop();
+	var viewportScrollLeft = $(window).scrollLeft();
+   //here we check if the infobox is popping up off the screen.   Reposition it so it is within the viewport
+   PopUpCanvas.addClass('InfoBoxTemp'); //turn in on, but keep it hidden so height,width exist
+   PopUpDiv.addClass('InfoBoxTemp'); //turn in on, but keep it hidden so height,width exist
+   var divPosition = PopUpCanvas.position();
+   var divTop = parseInt(divPosition.top); var divLeft = parseInt(divPosition.left);   PopUpCanvas.removeClass('InfoBoxTemp'); //back to what they started at
+   PopUpDiv.removeClass('InfoBoxTemp'); //back to what they started at
+   //too far down
+   if((viewportScrollTop+viewportHeight)<(divTop+divHeight)){
+       //alert('TOO FAR DOWN: viewportscrolltop=' + viewportScrollTop + ',viewportheight=' + viewportHeight+ ',divcsstop=' + parseInt(divPosition.top) + ',divheight=' + divHeight);alert('setting top to: ' + (viewportScrollTop+viewportHeight-divHeight));
+       PopUpCanvas.css('bottom','').css('top',(viewportScrollTop+viewportHeight-divHeight));
+   }
+   //too far right
+   if((viewportScrollLeft+viewportWidth)<(divLeft+divWidth)){
+       //alert('too far right!');
+       PopUpCanvas.css('left',viewportScrollLeft+viewportWidth-divWidth);
+   }
+   //too far up
+   if(viewportScrollTop>divTop){
+       //alert('too far up!');
+       //alert('BEFORE   viewporttop:' + viewportScrollTop + ',popuptop:' + divPosition.top);
+       PopUpCanvas.css('bottom','').css('top',viewportScrollTop);
+       //alert('AFTER    viewporttop:' + viewportScrollTop + ',popuptop:' + divPosition.top);
+   }
+   //too far left
+   if(viewportScrollLeft>divLeft){
+       //alert('too far left!');
+       PopUpCanvas.css('left',viewportScrollLeft);
+   }
+}
+//]]>
+</script>
+
+<script src="./Online Enrollment_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./Online Enrollment_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script src="./Online Enrollment_files/DotNetScripts_v4.js.download" type="text/javascript"></script>
+<script src="./Online Enrollment_files/AriaLib.js.download" type="text/javascript"></script>
+<script src="./Online Enrollment_files/jquery-1.10.2.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	
+	
+	
+</div>
+		<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspnetForm', ['tctl00$ctl00$PageBody$PageContent$enrollmentFormUpdatePanel','','tctl00$ctl00$PageBody$PageContent$ctl21',''], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+			
+<div id="pgBody">
+	<div id="header">
+		<div>
+			<h1>Alaska USA</h1>
+			<p class="skip"><a id="skip" class="skip" href="https://www.alaskausa.org/enroll/OnlineEnrollment.aspx#pgMain" title="Skip navigation">Skip page header and navigation</a></p>
+		</div>
+		<div id="topBar">
+			<a href="https://www.alaskausa.org/?t=tn" id="logo" title="Alaska USA products for you"><img src="./Online Enrollment_files/akusafcu_logo.png" alt="Alaska USA products for you"></a>
+			<!--<p id="headerReturnLink"><a href="https://www.alaskausa.org/?t=eh" title="Home">Return to home</a></p>-->
+			<p id="topBarMenu">
+				<a href="https://www.alaskausa.org/">
+					<span>Return to home</span>
+				</a>
+			</p>
+		</div>
+	</div>
+    
+	<div class="pgTitle">
+		<h1>Online Enrollment</h1>
+	</div>	
+	<div id="pgMain" class="pgMain">
+		<div class="row">
+			
+					<div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;SubmitButton&#39;)">
+	
+					<div class="leftCol">
+						<div data-val-showmessagebox="True" data-val-showsummary="False" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_ctl01" data-valsummary="true" style="display:none;">
+
+	</div>
+						
+						<h2 style="margin-top:0; margin-bottom:8px;">Enrollment Information</h2>
+						<table class="dataForm topDataForm">
+							<tbody>
+								<tr>
+									<th scope="row"><label id="firstNameLabel">First name*</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$firstName" type="text" id="firstName" tabindex="1" aria-labelledby="firstNameLabel" onblur="setConsentName();" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_FirstName ctl00_ctl00_PageBody_PageContent_ctl05" aria-required="true">
+										<span data-val-controltovalidate="firstName" data-val-errormessage="First Name is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_FirstName" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image1" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+										<span data-val-controltovalidate="firstName" data-val-errormessage="First Name must be 20 characters or less" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_ctl05" data-val="true" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image21" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="lastNameLabel">Last name*</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$lastName" type="text" id="lastName" tabindex="1" aria-labelledby="lastNameLabel" onblur="setConsentName();" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_LastName ctl00_ctl00_PageBody_PageContent_ctl06" aria-required="true">
+										<span data-val-controltovalidate="lastName" data-val-errormessage="Last Name is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_LastName" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image2" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+										<span data-val-controltovalidate="lastName" data-val-errormessage="Last Name must be 40 characters or less" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_ctl06" data-val="true" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image19" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="suffixLabel">Suffix</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$suffix" type="text" id="suffix" tabindex="1" aria-labelledby="suffixLabel" onblur="setConsentName();">
+										<span class="hint">Jr., Sr., III, etc.</span>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="ssnLabel">Last 6 of SSN*</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$ssn" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$PageBody$PageContent$ssn\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ssn" tabindex="1" class="ssnField" aria-labelledby="ssnLabel" type="tel" placeholder="xxx-__-____" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_SSN ctl00_ctl00_PageBody_PageContent_RegularExpressionValidator7" aria-required="true">									
+										<span data-val-controltovalidate="ssn" data-val-errormessage="SSN is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_SSN" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image3" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+										<span data-val-controltovalidate="ssn" data-val-errormessage="SSN is invalid." data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RegularExpressionValidator7" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="^xxx-[0-9]{2}-[0-9]{4}$" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image14" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="dobLabel">Date of birth*</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$dateOfBirth" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$PageBody$PageContent$dateOfBirth\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="dateOfBirth" tabindex="1" class="dateField" aria-labelledby="dobLabel dobExample" type="tel" placeholder="__/__/____" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_DOB ctl00_ctl00_PageBody_PageContent_CV_DOB" aria-required="true">
+										<span id="dobExample" style="display:none;">formatted as mm/dd/yyyy</span>
+                                        <span data-val-controltovalidate="dateOfBirth" data-val-errormessage="Date of birth is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_DOB" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image4" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+										<span data-val-controltovalidate="dateOfBirth" data-val-errormessage="Date of birth is invalid." data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_CV_DOB" class="errormsg" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="ValidateDOB" style="visibility:hidden;"><img id="ctl00_ctl00_PageBody_PageContent_Image15" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+                                        <script type="text/javascript">
+                                        	function ValidateDOB(source, args) {
+                                        		var field = $(source).closest("td").find("input:first");
+                                        		if ($.trim(field.val()) == "" || $.trim(field.val()) == "__/__/____") {   //need to put the mask in there too!
+                                        			args.IsValid = true;
+                                        		}
+                                        		else {
+                                        			var value = new Date($.trim(field.val()));
+                                        			//alert(value.toDateString());
+                                        			args.IsValid = (isValidDate($.trim(field.val())) && value > new Date(1900, 1, 1) && value <= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()));
+                                        			//alert(args.IsValid);
+                                        		}
+                                        		//args.IsValid = false;
+                                        	}
+                                        	// Validates that the input string is a valid date formatted as "mm/dd/yyyy"
+                                        	function isValidDate(dateString) {
+                                        		// First check for the pattern
+                                        		if (!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString))
+                                        			return false;
+
+                                        		// Parse the date parts to integers
+                                        		var parts = dateString.split("/");
+                                        		var day = parseInt(parts[1], 10);
+                                        		var month = parseInt(parts[0], 10);
+                                        		var year = parseInt(parts[2], 10);
+
+                                        		// Check the ranges of month and year
+                                        		if (year < 1000 || year > 3000 || month == 0 || month > 12)
+                                        			return false;
+
+                                        		var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+                                        		// Adjust for leap years
+                                        		if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+                                        			monthLength[1] = 29;
+
+                                        		// Check the range of the day
+                                        		return day > 0 && day <= monthLength[month - 1];
+                                        	}
+                                        </script>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="emailLabel">Email*</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$email" id="email" tabindex="1" aria-labelledby="emailLabel" type="email" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_Email ctl00_ctl00_PageBody_PageContent_REV_Email ctl00_ctl00_PageBody_PageContent_ctl07" aria-required="true">
+										<span data-val-controltovalidate="email" data-val-errormessage="Email is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_Email" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image13" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+										<span data-val-controltovalidate="email" data-val-errormessage="Email is invalid." data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_REV_Email" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,13}$" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image24" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+										<span data-val-controltovalidate="email" data-val-errormessage="Email must be 40 characters or less" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_ctl07" data-val="true" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image25" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="confirmEmailLabel">Confirm Email*</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$confirmEmail" id="confirmEmail" tabindex="1" aria-labelledby="confirmEmailLabel" type="email" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_ConfirmEmail ctl00_ctl00_PageBody_PageContent_CV_ConfirmEmail" aria-required="true">
+										<span data-val-controltovalidate="confirmEmail" data-val-errormessage="Confirm Email is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_ConfirmEmail" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image28" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+										<span data-val-controltovalidate="confirmEmail" data-val-errormessage="Email and Confirm Email do not match" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_CV_ConfirmEmail" data-val="true" data-val-evaluationfunction="CompareValidatorEvaluateIsValid" data-val-controltocompare="email" data-val-controlhookup="email" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image27" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+									</td>
+								</tr>
+								<tr>
+									<th><label id="phoneLabel">Mobile Phone</label></th>
+									<td>
+										<input name="ctl00$ctl00$PageBody$PageContent$phone" id="phone" tabindex="1" class="phoneField" aria-labelledby="phoneLabel" type="tel" placeholder="___-___-____" aria-describedby="ctl00_ctl00_PageBody_PageContent_REV_Phone">									
+										<span data-val-controltovalidate="phone" data-val-errormessage="Mobile Phone is invalid." data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_REV_Phone" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="^[0-9]{3}-[0-9]{3}-[0-9]{4}$" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image26" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="ctl00_ctl00_PageBody_PageContent_enrollmentFormUpdatePanel">	
+								<table class="dataForm bottomDataForm">
+									
+									<tbody>
+		        						<tr id="ctl00_ctl00_PageBody_PageContent_visaDebit_QuestionRow" class="noTopBorder">
+	<th><label id="hasVisaLabel">Do you have an Alaska USA Visa debit card?*</label></th>
+	<td>
+				        						<span id="ctl00_ctl00_PageBody_PageContent_ctl21">
+								        				<div role="radiogroup" aria-labelledby="hasVisaLabel" aria-describedby="RFV_HasVisa">
+										        			<label class="radioSelected"><input id="ctl00_ctl00_PageBody_PageContent_hasVisa_yes" type="radio" name="ctl00$ctl00$PageBody$PageContent$hasVisa" value="yes" checked="checked" onclick="clickVisa();" tabindex="1"> Yes</label>
+												        	<label><input id="ctl00_ctl00_PageBody_PageContent_hasVisa_no" type="radio" name="ctl00$ctl00$PageBody$PageContent$hasVisa" value="no" onclick="clickVisa();setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$PageBody$PageContent$hasVisa_no\&#39;,\&#39;\&#39;)&#39;, 0)" tabindex="1"> No</label>																					
+												        	<span data-val-controltovalidate="hasVisa_hidden" data-val-errormessage="Visa debit card question is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="RFV_HasVisa" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image9" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+		        										</div>													
+        											</span>					
+								        		<input name="ctl00$ctl00$PageBody$PageContent$hasVisa_hidden" type="text" value="yes" id="hasVisa_hidden" style="display:none;" aria-describedby="RFV_HasVisa" aria-required="true">
+						        			</td>
+</tr>
+
+										<tr id="ctl00_ctl00_PageBody_PageContent_visaDebit_CardNumberRow" class="noTopBorder visaDebitQuestionRow">
+	<th><label id="visaDebitCardNumberLabel">Last 10 digits of card*</label></th>
+	<td>
+												<span data-val-controltovalidate="visaDebitCardNumber" data-val-errormessage="Visa debit card number is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_visaDebitRequiredFieldValidator" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="float:right;margin:75px 70px 0 0;display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image5" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+												<span data-val-controltovalidate="visaDebitCardNumber" data-val-errormessage="Debit card number is invalid." data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_visaDebitRegularExpressionValidator" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="^[0-9]{2}\s{2}[0-9]{4}\s{2}[0-9]{4}$" style="float:right;margin:75px 70px 0 0;display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image16" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+												<div class="visaDebit_background">
+													<input name="ctl00$ctl00$PageBody$PageContent$visaDebitCardNumber" id="visaDebitCardNumber" tabindex="1" class="visaDebit_input" aria-labelledby="visaDebitCardNumberLabel" type="tel" placeholder="__  ____  ____" aria-describedby="ctl00_ctl00_PageBody_PageContent_visaDebitRequiredFieldValidator ctl00_ctl00_PageBody_PageContent_visaDebitRegularExpressionValidator" aria-required="true">
+												</div>
+											</td>
+</tr>
+
+										<tr id="ctl00_ctl00_PageBody_PageContent_visaDebit_CvvRow" class="visaDebitQuestionRow">
+	<th><label id="cvvLabel">3-digit card security code*</label></th>
+	<td>
+												<input name="ctl00$ctl00$PageBody$PageContent$cvv" id="ctl00_ctl00_PageBody_PageContent_cvv" tabindex="1" aria-labelledby="cvvLabel" type="tel" aria-describedby="ctl00_ctl00_PageBody_PageContent_RFV_CVV ctl00_ctl00_PageBody_PageContent_RegExV_CVV" aria-required="true">
+												<span id="ctl00_ctl00_PageBody_PageContent_InfoBox1" class="" style=""><a id="ctl00_ctl00_PageBody_PageContent_InfoBox1_InfoBox1_OpenLink" onclick="TogglePersistantPopup(&#39;ctl00_ctl00_PageBody_PageContent_InfoBox1&#39;,&#39;ctl00_ctl00_PageBody_PageContent_InfoBox1_InfoBox1_OpenLink&#39;,1,1);CancelEvent(event);return false;" href="https://www.alaskausa.org/enroll/OnlineEnrollment.aspx#" target="InfoBox"><img id="ctl00_ctl00_PageBody_PageContent_InfoBox1_InfoBox1_OpenImage" title="Click to View" class="InfoBox_OpenImage" onclick="TogglePersistantPopup(&#39;ctl00_ctl00_PageBody_PageContent_InfoBox1&#39;,&#39;ctl00_ctl00_PageBody_PageContent_InfoBox1_InfoBox1_OpenImage&#39;,1,1);CancelEvent(event);return false;" src="./Online Enrollment_files/help.png" alt="Click to View"></a></span><span id="ctl00_ctl00_PageBody_PageContent_InfoBox1_PopupCanvas" style="width:220px;" class="InfoBoxCanvas"><span id="ctl00_ctl00_PageBody_PageContent_InfoBox1_PopupDiv" style="" class="InfoBox"><img id="ctl00_ctl00_PageBody_PageContent_InfoBox1_InfoBox1_CloseImage" class="InfoBox_CloseImage" onclick="TogglePersistantPopup(&#39;ctl00_ctl00_PageBody_PageContent_InfoBox1&#39;,&#39;ctl00_ctl00_PageBody_PageContent_InfoBox1_InfoBox1_OpenLink&#39;,1,1);CancelEvent(event);return false;" src="./Online Enrollment_files/close.png" alt="Close Popup">
+													<img src="./Online Enrollment_files/visaPlatinum-back.png" alt="Back of Visa Debit Card" style="float:right;height:126px;width:200px;">
+													<div style="clear:both;"></div>
+												</span></span>										
+												<span data-val-controltovalidate="ctl00_ctl00_PageBody_PageContent_cvv" data-val-errormessage="3-digit security code is required" data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RFV_CVV" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image6" title="Required" src="./Online Enrollment_files/icon-alert.gif" alt="Required"></span>
+												<span data-val-controltovalidate="ctl00_ctl00_PageBody_PageContent_cvv" data-val-errormessage="3-digit security code is invalid." data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_RegExV_CVV" data-val="true" data-val-evaluationfunction="RegularExpressionValidatorEvaluateIsValid" data-val-validationexpression="^[0-9]{3}$" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Image17" title="Invalid" src="./Online Enrollment_files/icon-alert.gif" alt="Invalid"></span>
+											</td>
+</tr>
+
+										
+										
+										
+										
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2">* indicates a required field</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div> 
+				            
+
+						<h2>Security Image</h2>
+                        <div><span style="margin:5px;float:left;"><img src="./Online Enrollment_files/CaptchaImage.aspx" style="border:0;width:180px;height:50px;" alt="Captcha"></span><span style="margin:5px;float:left;"><label>Enter the code shown in the image<br><input name="ctl00$ctl00$PageBody$PageContent$Captcha_Info" type="hidden" value="4D250E3738571FDA9A04D352F1FD883EC004052204862239D3C6F78CF754E63CFFFD7347EEBE58FE6C4B897FD4E296E6AF4D0A9D8F140A93D5A7F1905EB6496E222F22DF928190B01397568198268DC8FAA7A26759A9188A82DCF3BAEEF913C2C348F38B834180EE8966AEAF557488C07B036C897BE0452B08D55009ED123BADE91DE34D"><input name="ctl00$ctl00$PageBody$PageContent$Captcha" type="text" aria-describedby="ctl00_ctl00_PageBody_PageContent_Captcha_Captcha_clientValidator" maxlength="5" value=""><span data-val-errormessage="Incorrect security code." data-val-display="Dynamic" data-val-validationgroup="enrollmentValidation" id="ctl00_ctl00_PageBody_PageContent_Captcha_Captcha_clientValidator" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="ValidateCaptcha" style="display:none;"><img id="ctl00_ctl00_PageBody_PageContent_Captcha_Captcha_errorImage1" title="Incorrect security code." src="./Online Enrollment_files/icon-alert.gif" alt="Incorrect security code." style="margin:0 0 -4px 4px;"></span><img id="ctl00$ctl00$PageBody$PageContent$Captcha_AudioImage" src="./Online Enrollment_files/audio.png" alt="Click to hear code." tooltip="Click to hear code." style="margin:0 0 -4px 2px;cursor:pointer;" role="button" tabindex="0"><audio id="ctl00$ctl00$PageBody$PageContent$Captcha_Audio"><source src="CaptchaAudio.aspx?guid=a9d6d14c-9e3a-48e1-acb5-dab609e310a8&amp;v=4D250E3738571FDA9A04D352F1FD883EC004052204862239D3C6F78CF754E63CFFFD7347EEBE58FE6C4B897FD4E296E6AF4D0A9D8F140A93D5A7F1905EB6496E222F22DF928190B01397568198268DC8FAA7A26759A9188A82DCF3BAEEF913C2C348F38B834180EE8966AEAF557488C07B036C897BE0452B08D55009ED123BADE91DE34D"><track kind="captions" src="CaptchaVTT.aspx?guid=a9d6d14c-9e3a-48e1-acb5-dab609e310a8&amp;v=4D250E3738571FDA9A04D352F1FD883EC004052204862239D3C6F78CF754E63CFFFD7347EEBE58FE6C4B897FD4E296E6AF4D0A9D8F140A93D5A7F1905EB6496E222F22DF928190B01397568198268DC8FAA7A26759A9188A82DCF3BAEEF913C2C348F38B834180EE8966AEAF557488C07B036C897BE0452B08D55009ED123BADE91DE34D" srclang="en"></audio></label></span><br style="clear:both;"></div>
+						<div style="clear:both;">
+                            <a id="ctl00_ctl00_PageBody_PageContent_captchaRefresh" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$PageBody$PageContent$captchaRefresh&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Having trouble reading?  Get a new image.</a>
+						</div>
+
+						<p>							
+                            By clicking submit, I confirm that I have read and accept the Share Account
+                            (<a target="_blank" href="https://www.alaskausa.org/getDocument.asp?ref=SADS" id="aHaveReadSADS">Consumer</a>
+                            | <a target="_blank" href="https://www.alaskausa.org/downloads/Business-SADS.pdf" id="aHaveReadBSADS">Business</a>),
+                            <a target="_blank" href="https://www.alaskausa.org/downloads/UltraBranch_Agreement_Final.pdf" id="aHaveReadUBConsent">UltraBranch Service Terms</a>
+                            and the <a target="_blank" href="https://www.alaskausa.org/downloads/eftdiscls.pdf" id="aHaveReadEFTDisclosure">Electronic Fund Transfer Act</a> disclosures.
+						</p>
+						<p style="font-size:.85em;">
+							Files are available for download in PDF format. To view or print these files, you will need <a target="_blank" href="https://get.adobe.com/reader/">Adobe Reader</a>.
+						</p>
+						
+						<div style="margin:40px 0;text-align:center;">
+							<input type="submit" name="ctl00$ctl00$PageBody$PageContent$SubmitButton" value="Submit" onclick="setupMessage();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$PageBody$PageContent$SubmitButton&quot;, &quot;&quot;, true, &quot;enrollmentValidation&quot;, &quot;&quot;, false, false))" id="SubmitButton" tabindex="1">
+						</div>
+						<div id="loadingSection" class="results" style="display:none;">							
+							<div id="loadingMsg"></div>
+							<input type="hidden" name="ctl00$ctl00$PageBody$PageContent$returnedResults" id="returnedResults" value="false">
+						</div>
+
+						<span id="ctl00_ctl00_PageBody_PageContent_testResponse"></span>
+						<div style="display:none;"><span id="ctl00_ctl00_PageBody_PageContent_dummyInfoBox" class="" style=""><a id="ctl00_ctl00_PageBody_PageContent_dummyInfoBox_dummyInfoBox_OpenLink" onclick="TogglePersistantPopup(&#39;ctl00_ctl00_PageBody_PageContent_dummyInfoBox&#39;,&#39;ctl00_ctl00_PageBody_PageContent_dummyInfoBox_dummyInfoBox_OpenLink&#39;,1,1);CancelEvent(event);return false;" href="https://www.alaskausa.org/enroll/OnlineEnrollment.aspx#" target="InfoBox">Dummy</a></span><div id="ctl00_ctl00_PageBody_PageContent_dummyInfoBox_PopupCanvas" style="width:300px;" class="InfoBoxCanvas"><div id="ctl00_ctl00_PageBody_PageContent_dummyInfoBox_PopupDiv" style="" class="InfoBox"><img id="ctl00_ctl00_PageBody_PageContent_dummyInfoBox_dummyInfoBox_CloseImage" class="InfoBox_CloseImage" onclick="TogglePersistantPopup(&#39;ctl00_ctl00_PageBody_PageContent_dummyInfoBox&#39;,&#39;ctl00_ctl00_PageBody_PageContent_dummyInfoBox_dummyInfoBox_OpenLink&#39;,1,1);CancelEvent(event);return false;" src="./Online Enrollment_files/close.png" alt="Close Popup">Need this because the infoboxes are hidden on initial page load --js isn't rendered during postback-- so infobox doesn't work</div></div></div>
+						<script>
+                            function ValidateTCFDebit(sender, args) {
+                                validate_hasVisa(sender, args);
+                                if (args.IsValid)
+                                    return;
+                                alert($("input[name$='$tcfHadDebit']:checked").length);
+                                args.IsValid = $("input[name$='$tcfHadDebit']:checked").length > 0;
+                            }
+                            function ValidateTCFDeposit(sender, args) {
+                                validate_hasVisa(sender, args);
+                                if (args.IsValid)
+                                    return;
+                                alert($("input[name$='$tcfHadDeposit']:checked").length);
+                                args.IsValid = $("input[name$='$tcfHadDeposit']:checked").length > 0;
+                            }
+							function validate_hasVisa(sender, args) {
+                                args.IsValid = $("input[name$='$hasVisa']:checked").length > 0;
+                                if (args.IsValid)
+                                    return;
+                                args.IsValid = $("input[name$='$tcfHadDebit']:checked").length > 0;
+                                if (!args.IsValid)
+                                    return;
+                                args.IsValid = $("input[name$='$tcfHadDeposit']:checked").length > 0;
+							}
+							function clickVisa() {
+								$("#hasVisa_hidden").val("clicked");
+								ControlValidate("hasVisa_hidden");
+							}
+							function clickAutoLoan() {
+								$("#hasAutoLoan_hidden").val("clicked");
+								ControlValidate("hasAutoLoan_hidden");
+							}
+							function clickPaidAutoLoan() {
+								$("#hasPaidAutoLoan_hidden").val("clicked");
+								ControlValidate("hasPaidAutoLoan_hidden");
+							}
+							function ControlValidate(id) {
+								var c = document.getElementById(id);
+								if (typeof (c.Validators) != "undefined") {
+									for (var i = 0; i < c.Validators.length; i++) {
+										ValidatorValidate(c.Validators[i]);
+									}
+								}
+							}
+							function isPageValid() {
+								if (typeof (Page_Validators) != "undefined") {
+									for (var i = 0; i < Page_Validators.length; i++) {
+										var validator = Page_Validators[i];
+										ValidatorValidate(validator);//make sure it's been checked
+										//console.log(validator.id + ":" + validator.isvalid);
+										if (!validator.isvalid) { return false; }
+									}
+								}
+								return true;
+							}
+							function setupMessage() {
+								if (isPageValid()) {
+									//when the postback returns, all of this will be undone -- hopefully the postback turns other stuff on
+									$("#SubmitButton").css('disabled', true);
+									ShowLoading();	//in DotNetScripts_v4
+									$(".message", "#LoadingContainer").css("background", "none").css("padding-left","1px").css("padding-right","28px");	//remove the spinner, it doesn't spin in IE
+									$(".inner", "#LoadingContainer").prepend("<div class=\"small progress\"><div>Loading</div></div>");	//add in the css spinner
+									setTimeout(function () {
+										$(".inner", "#LoadingContainer").css("width", "300px").css("padding-top", "10px");
+										$(".message:first", "#LoadingContainer").html("Validating");
+										$(".inner", "#LoadingContainer").append("<div class=\"message\" style=\"margin-top:5px;font-size:1em;background:none;padding-left:inherit;\"><div>This may take a minute.</div><div>Please do not refresh this page.</div></div>");
+										$(".message", "#LoadingContainer").css("line-height", "inherit");
+									}, 300);
+									//setTimeout(function () { if ($("#returnedResults").val() != "true") { $("#loadingMsg").hide(); $("#loadingSection").show(); $("#warningSection_timeout").show(); } }, 89 * 1000);
+									return true;
+								}
+								else {
+									return false;
+								}
+							}
+							//function testPost() {
+							//	$.post("http://akusaappsdev/ubenrollment/api/decision/enroll", { "enroll_firstName": "test" },
+							//		function (result) { alert(result); });
+							//}
+							function setConsentName() {
+								var first = $.trim($("#firstName").val());
+								var last = $.trim($("#lastName").val());
+								var suffix = $.trim($("#suffix").val());
+								if (first != "" && last != "") {
+									$("#consent_applicantName").text(", " + $.trim(first + " " + last + " " + suffix).toUpperCase() + ",");
+								}
+								else {
+									$("#consent_applicantName").text("");
+								}
+							}
+						</script>
+					</div>
+					
+</div>
+					<div class="sideBar">						
+						<div class="learnMore">
+							<h2>Questions?</h2>
+							<p>
+								For assistance contact the Member Service Center.
+							</p><p style="padding-left:10px;margin-top:10px;">
+								907-563-4567 or 800-525-9094<br><br>
+								Open 24 hours a day, 7 days a week.<br><br>
+								<a href="https://www.alaskausa.org/service/contact.asp">More contact information</a>
+							</p>
+							<p></p>
+						</div>
+					</div>							
+					<div style="clear:both;"></div>					
+					
+					<input type="hidden" name="ctl00$ctl00$PageBody$PageContent$HaveReadEsignConsent" id="HaveReadEsignConsent" value="false">
+					<input type="hidden" name="ctl00$ctl00$PageBody$PageContent$TextFieldWasActive" id="TextFieldWasActive" value="false">
+					<input type="hidden" name="ctl00$ctl00$PageBody$PageContent$TextFieldIsActive" id="TextFieldIsActive" value="firstName">
+					<script type="text/javascript">
+						$(document).ready(function () {
+							//$("#esignConsent_0").on('click', function () {
+							//	var hasRead = $("#HaveReadEsignConsent").val() == "true";
+							//	if (!hasRead) {
+							//		if (window.innerWidth < 500) {
+							//			alert("Please read and retain the terms and disclosures.");
+							//		}
+							//		else {
+							//			alert("Please read and retain the terms and disclosures by either printing, scrolling completely through the text or clicking on the link to the document");
+							//		}
+							//		$(this).prop('checked', false);
+							//	}
+							//	else { return true; }
+							//});
+                            $("#aHaveReadEsignConsent").on('click', function () {
+    							$("#HaveReadEsignConsent").val("true");
+                                return true;
+							});
+                            $("input:text").on('focus', function () {
+    							$("#TextFieldIsActive").val(this.id);
+                                return true;
+							});
+                            $("input[type='tel']").on('focus', function () {
+    							$("#TextFieldIsActive").val(this.id);
+                                return true;
+							});
+						});
+                        function setHaveReadAll() {
+							$("#HaveReadEsignConsent").val("true");
+						}
+                    </script>
+					<script>
+						$(document).ready(function () {
+							//$('a[class*=leanModal]').leanModal({ top: 200, closeButton: ".modal_close" });
+							initializeMasks();
+							$(document).on("click", ".dataForm input:radio", function () { selectRadio(this); });
+							//$("#firstName").focus();
+						});
+						function initializeMasks() {
+                            var focusedElementId = $("#TextFieldWasActive").val();
+                            if (focusedElementId == "false")
+                                focusedElementId = "firstName";
+							//$(".ssnField").prop('placeholder', 'xxx-__-____').mask("xxx-99-9999", { autoclear: false });
+							//$(".dateField").prop('placeholder', '__/__/____').mask("99/99/9999", { autoclear: false });
+							$(".ssnField").prop('placeholder', 'xxx-__-____').mask("xxx-99-9999", { placeholder: "xxx-__-____", autoclear: false });
+                            $(".dateField").prop('placeholder', '__/__/____').mask("99/99/9999", { placeholder: '__/__/____', autoclear: false });
+                            $(".phoneField").prop('placeholder', '___-___-____').mask("999-999-9999", { placeholder: "___-___-____", autoclear: false });
+							initializeVisaMask();
+
+							//in IE11 .mask steals focus.  This left the cursor in the visa debit card question.  Moving focus fired the validators.  So we move focus and clear the error
+							setTimeout(function () { $("#"+focusedElementId).focus(); Page_ClientValidateReset() }, 500);
+						}
+						function initializeVisaMask() {
+							//in a separate function so it can be re-initialized separate from the others
+							$("#visaDebitCardNumber").prop('placeholder', '__  ____  ____').mask("99  9999  9999", { placeholder: '__  ____  ____', autoclear: false });
+						}
+						function selectRadio(elem) {
+							$(elem).closest("div[role=radiogroup]").find("input:radio").each(function () { $(this).closest("label").removeClass("radioSelected"); });
+							$(elem).closest("label").addClass("radioSelected");
+						}
+						function reselectAllRadios() {
+							$(".dataForm input:radio:checked").each(function () { selectRadio(this); });
+						}
+						function Page_ClientValidateReset() {
+							if (typeof (Page_Validators) != "undefined") {
+								for (var i = 0; i < Page_Validators.length; i++) {
+									var validator = Page_Validators[i];
+									validator.isvalid = true;
+									ValidatorUpdateDisplay(validator);
+									//console.log(validator.id + "<br>");
+								}
+							}
+						}
+                    </script>
+				
+		</div>
+	</div>
+
+
+	<div id="siteFooter" role="contentinfo">
+		<div id="footer">
+			<nav aria-label="footer links">
+				<ul class="links">
+					<li><a href="https://www.alaskausa.org/?t=ef" title="Home">Return to home</a></li>
+					<li><a href="https://www.alaskausa.org/service/security/privacy.asp?t=f">Privacy</a></li>
+				</ul>
+			</nav>
+			<div class="disclaimer">
+				<div class="disclaimerLogos">
+					<img class="decorRight" src="./Online Enrollment_files/ncua_2016_gray.png" alt="Federally Insured by NCUA">
+					<img class="decorRight" alt="Equal Housing Lender" src="./Online Enrollment_files/EHL_2016_gray.png">
+				</div>
+				<p>Alaska USA and UltraBranch are registered trademarks of Alaska USA Federal Credit Union</p>
+				<p>© Copyright <span id="ctl00_ctl00_PageBody_CopyrightYear">2022</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_PageBody_PageContent_ctl05 = document.all ? document.all["ctl00_ctl00_PageBody_PageContent_ctl05"] : document.getElementById("ctl00_ctl00_PageBody_PageContent_ctl05");
+ctl00_ctl00_PageBody_PageContent_ctl05.evaluationfunction = "Length_Validation";
+ctl00_ctl00_PageBody_PageContent_ctl05.MaximumLength = "20";
+var ctl00_ctl00_PageBody_PageContent_ctl06 = document.all ? document.all["ctl00_ctl00_PageBody_PageContent_ctl06"] : document.getElementById("ctl00_ctl00_PageBody_PageContent_ctl06");
+ctl00_ctl00_PageBody_PageContent_ctl06.evaluationfunction = "Length_Validation";
+ctl00_ctl00_PageBody_PageContent_ctl06.MaximumLength = "40";
+var ctl00_ctl00_PageBody_PageContent_ctl07 = document.all ? document.all["ctl00_ctl00_PageBody_PageContent_ctl07"] : document.getElementById("ctl00_ctl00_PageBody_PageContent_ctl07");
+ctl00_ctl00_PageBody_PageContent_ctl07.evaluationfunction = "Length_Validation";
+ctl00_ctl00_PageBody_PageContent_ctl07.MaximumLength = "40";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() { console.log('ready');SetAriaLabels_FormRows();SetAriaLabels_FormColumns();AriaFixWrappedElements();setTimeout(SetAriaForValidators,1000); });AjaxFix();PrefsFormsLib.ApplicationRoot = '/enroll/';$('input[name=\'ctl00$ctl00$PageBody$PageContent$Captcha\']').change(function() {ValidatorValidate(ctl00_ctl00_PageBody_PageContent_Captcha_Captcha_clientValidator); });$('img[id=\'ctl00$ctl00$PageBody$PageContent$Captcha_AudioImage\']').click(function() { $('audio[id=\'ctl00$ctl00$PageBody$PageContent$Captcha_Audio\']').get(0).play(); });$('img[id=\'ctl00$ctl00$PageBody$PageContent$Captcha_AudioImage\']').keydown(function(event) { if(event.keyCode === 32) { event.preventDefault(); $('audio[id=\'ctl00$ctl00$PageBody$PageContent$Captcha_Audio\']').get(0).play(); } });//]]>
+</script>
+<span style="display: none !important;"><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""></span><span style="display: none !important;"><input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value=""></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0A0E1CD6"></span><span style="display: none !important;"><input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value=""></span><span style="display: none !important;"><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="K/LB9yOl5FwNrG2EfHY7fa4MC7Rav0iSSFZ/3g97YQvVoiKcf2A0IQYsWVtw5DGhSEYCrT+MqW/5itccwx6aujVBRMORjIE3XUseRtyt5bRwoRkLyAmYqoIQ1CMSRFGJKCeuolLZVheybRhk9Fx/qUWb2CGPQNncV72prd/fXCkH56BRJppCDyt+6FUEPFX/EheXopOVcyZZC70DaHl8hqBHsnSUYs114YxuHGKZuG0gK3QNJ+OO2Wax4r66UXlw4dNhJRuxnnNx9upwQ2VGKZ1usHp5Sa+CVUCyJsrWpgrgxMZCu6FNadupSQ8mIM9zaWu2rJhhN5Mhp/UsJ/SRW9hwlBDmFiy1dN0b16YqwObsZLoNrqCTK+HgqppexefTosJ1AfosMeV+tjHa0FkrxFpIPf0cG9Nh383nCQTvxtCf72m2imt2N+vAgQeo9CeQUnBS+6Duw2S6RKv9s27edwPbCknDaBha8g+jvAZFWblUgEpF"></span></form>
+	</div>
+
+
+</body></html>
